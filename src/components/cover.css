@@ -1,4 +1,4 @@
-.cover {
+.mynd {
   position: fixed;
   top: 0;
   left: 0;
@@ -6,4 +6,39 @@
   height: 100%;
   background: url(https://uthlid.files.wordpress.com/2014/03/img_0036.jpg)
     no-repeat 50% 50% / cover;
+}
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+
+body {
+  display: -ms-flexbox;
+  color: #fff;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+.cover {
+  position: fixed;
+  top: 56%;
+  left: 37%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+.cover-container {
+  max-width: 152em;
+  width: 1000px;
+}
+
+.cover-heading {
+  font-family: "arial";
+  font-size: 66px;
+  color: white;
+}
+
+.lead {
+  text-align: center;
+  font-family: "arial";
+  color: white;
 }
