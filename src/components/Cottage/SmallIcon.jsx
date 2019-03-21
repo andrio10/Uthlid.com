@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const SmallIcons = ({ IconArray }) => (
+const SmallIcon = ({ IconArray }) => (
   <Container>
     {IconArray.map(values => {
       return <Icon title={`${values.toolTip}`} src={values.icon} />;
@@ -9,7 +9,7 @@ const SmallIcons = ({ IconArray }) => (
   </Container>
 );
 
-export default SmallIcons;
+export default SmallIcon;
 
 const Container = styled.div`
   display: flex;
