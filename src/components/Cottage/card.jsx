@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import LargeIcons from "./LargeIcons";
-import SmallIcons from "./SmallIcons";
-const Card = ({ cardInfo }) => (
+import SmallIcon from "./SmallIcon";
+
+const Card = ({CoverPhoto, Title, BlackbarInfo, SmallIcons}) => (
   <Container>
-    <Image src={cardInfo.image} />
-    <Title>{cardInfo.title}</Title>
+    <Image src={CoverPhoto} />
+    <TitleText>{Title}</TitleText>
     <Line />
-    <LargeIcons IconArray={cardInfo.LargeIcons} />
-    <SmallIcons IconArray={cardInfo.SmallIcons} />
+    <LargeIcons IconArray={BlackbarInfo} />
+    <SmallIcon IconArray={SmallIcons} />
     <Button>{`See More`} </Button>
   </Container>
 );
@@ -40,7 +41,7 @@ const Line = styled.div`
   margin: 0px auto;
 `;
 
-const Title = styled.h1`
+const TitleText = styled.h1`
   font-size: 30px;
   margin: 0px;
   padding: 0px;
@@ -63,8 +64,4 @@ const Button = styled.button`
   text-transform: uppercase;
   background-color: #dcd0c0;
   cursor: pointer;
-
-  
-
-
 `;

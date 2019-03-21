@@ -1,8 +1,7 @@
 .mynd {
   min-height: 900px;
   width: 100%;
-  background: url(https://uthlid.files.wordpress.com/2014/03/img_0036.jpg)
-    no-repeat 50% 50% / cover;
+  background-color: red;
   filter: brightness(95%);
 }
 body {

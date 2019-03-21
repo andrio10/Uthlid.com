@@ -6,8 +6,8 @@ const LargeIcons = ({ IconArray }) => (
     {IconArray.map(values => {
       return (
         <IconRow>
-          <Icon src={values.icon} />
-          <IconText>{values.text}</IconText>
+          <Icon src={values.Icon} />
+          <IconText>{values.Text}</IconText>
         </IconRow>
       );
     })}
