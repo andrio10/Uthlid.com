@@ -6,10 +6,10 @@ const Price = `164`;
 const CoverPhoto = IconPackage.oneBedroom;
 const URL = `OneBedroom`;
 const BlackbarInfo = [
-  { Icon: `${IconPackage.sqIcon}`, Text: `38` },
-  { Icon: `${IconPackage.personIcon}`, Text: `2` },
-  { Icon: `${IconPackage.discIcon}`, Text: `4` },
-  { Icon: `${IconPackage.bedIcon}`, Text: `1` }
+  { Icon: `${IconPackage.sqIcon}`, Text: `38`, IconBlack: `${IconPackage.m2Black}` },
+  { Icon: `${IconPackage.personIcon}`, Text: `2`, IconBlack: `${IconPackage.personsBlack}` },
+  { Icon: `${IconPackage.discIcon}`, Text: `4`, IconBlack: `${IconPackage.disksBlack}` },
+  { Icon: `${IconPackage.bedIcon}`, Text: `1`, IconBlack: `${IconPackage.bedBlack}` }
 ];
 
 const TextInformation = [

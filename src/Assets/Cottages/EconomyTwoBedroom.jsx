@@ -6,10 +6,10 @@ const Price = `138`;
 const CoverPhoto = IconPackage.economyImage;
 const URL = `Economy`;
 const BlackbarInfo = [
-  { Icon: `${IconPackage.sqIcon}`, Text: `34` },
-  { Icon: `${IconPackage.personIcon}`, Text: `4-6` },
-  { Icon: `${IconPackage.discIcon}`, Text: `6` },
-  { Icon: `${IconPackage.bedIcon}`, Text: `2` }
+  { Icon: `${IconPackage.sqIcon}`, Text: `34`, IconBlack: `${IconPackage.m2Black}` },
+  { Icon: `${IconPackage.personIcon}`, Text: `4-6`, IconBlack: `${IconPackage.personsBlack}` },
+  { Icon: `${IconPackage.discIcon}`, Text: `6`, IconBlack: `${IconPackage.disksBlack}` },
+  { Icon: `${IconPackage.bedIcon}`, Text: `2`, IconBlack: `${IconPackage.bedBlack}` }
 ];
 
 const TextInformation = [

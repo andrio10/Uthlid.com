@@ -7,9 +7,11 @@ export default Header;
 
 const Container = styled.div`
   height: 100%;
+  min-height: 500px;
   width: 100%;
   display: flex;
   background-image: url(${props => props.img});
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 `;

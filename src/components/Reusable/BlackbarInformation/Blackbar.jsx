@@ -9,16 +9,16 @@ import styled from "styled-components";
   
 */
 
-const Blackbar = ({ Info }) => (
-  <Container>
-    {Info.map(values => {
+const Blackbar = ({ Info }, horseInformation) => (
+  <Container horseInformation={horseInformation}>
+    {!horseInformation ? Info.map(values => {
       return (
         <Row>
           <Icon src={values.Icon} />
           <Text>{values.Text}</Text>
         </Row>
       );
-    })}
+    }): null}
   </Container>
 );
 
@@ -28,7 +28,7 @@ const Container = styled.div`
   display: flex;
   height: 80px;
   width: 100%;
-  background-color: #373737;
+  background-color: ${props => props.horseInformation ? "transparent" : "#373737"};
   justify-content: space-evenly;
 `;
 

@@ -15,10 +15,10 @@ import Information from './Information';
 */
 
 
-const BlackbarInformation = ({BlackbarInfo, Price, Title}) => (
+const BlackbarInformation = ({BlackbarInfo, Price, Title, horseInformation}) => (
     <Container>
-        <Blackbar Info={BlackbarInfo}/>
-        <Information Price={Price} Title={Title} />
+        <Blackbar Info={BlackbarInfo} horseInformation={horseInformation}/>
+        <Information Price={Price} Title={Title} horseInformation={horseInformation}/>
     </Container>
 );
 

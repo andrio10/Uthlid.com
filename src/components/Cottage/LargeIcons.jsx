@@ -4,9 +4,10 @@ import styled from "styled-components";
 const LargeIcons = ({ IconArray }) => (
   <Container>
     {IconArray.map(values => {
+      {console.log(values)}
       return (
         <IconRow>
-          <Icon src={values.Icon} />
+          <Icon src={values.IconBlack} />
           <IconText>{values.Text}</IconText>
         </IconRow>
       );
@@ -42,6 +43,7 @@ const IconRow = styled.div`
 const Icon = styled.img`
   height: 30px;
   width: 30px;
+  fill: "black";
 `;
 
 const IconText = styled.h5`

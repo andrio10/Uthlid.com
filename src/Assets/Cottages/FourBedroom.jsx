@@ -5,10 +5,10 @@ const Price = `282`;
 const CoverPhoto = IconPackage.fourBedroom;
 const URL = `Fourbedroom`;
 const BlackbarInfo = [
-  { Icon: `${IconPackage.sqIcon}`, Text: `130` },
-  { Icon: `${IconPackage.personIcon}`, Text: `8` },
-  { Icon: `${IconPackage.discIcon}`, Text: `8` },
-  { Icon: `${IconPackage.bedIcon}`, Text: `4` }
+  { Icon: `${IconPackage.sqIcon}`, Text: `130`, IconBlack: `${IconPackage.m2Black}` },
+  { Icon: `${IconPackage.personIcon}`, Text: `8`, IconBlack: `${IconPackage.personsBlack}` },
+  { Icon: `${IconPackage.discIcon}`, Text: `8`, IconBlack: `${IconPackage.disksBlack}` },
+  { Icon: `${IconPackage.bedIcon}`, Text: `4`, IconBlack: `${IconPackage.bedBlack}` }
 ];
 
 const TextInformation = [

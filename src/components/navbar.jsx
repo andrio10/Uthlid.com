@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "./cover.css";
 
 class NavBar extends Component {
@@ -15,7 +15,7 @@ class NavBar extends Component {
               <Link to="/cottages">Cottages</Link>
             </li>
             <li>
-              <a href="index.html">Horse Rental</a>
+              <Link to="/horserental">Horse Rental</Link>
             </li>
             <li>
               <a href="index.html">Golf</a>

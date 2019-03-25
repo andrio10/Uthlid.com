@@ -10,7 +10,7 @@ const Card = ({CoverPhoto, Title, BlackbarInfo, SmallIcons, URL}) => (
     <TitleText>{Title}</TitleText>
     <Line />
     <LargeIcons IconArray={BlackbarInfo} />
-    <SmallIcon IconArray={SmallIcons} />
+    <SmallIcon IconArray={SmallIcons} /> 
     <Button to={`/cottages/${URL}`} >{`See More`} </Button>
   </Container>
 );
@@ -55,14 +55,21 @@ const Button = styled(Link)`
   height: 50px;
   display: flex;
   margin: 20px auto;
-  border: 1px #c6bbac solid;
+  border: 2px #c6bbac solid;
   justify-content: center;
+  align-items: center;
   color: #373737;
   border-radius: 20px;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 1px;
   font-size: 12px;
   text-transform: uppercase;
   background-color: #dcd0c0;
   cursor: pointer;
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+    border: 2px #9e9589 solid;
+  }
 `;
