@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "./card";
-import CottageInfo from "../../Assets/Cottages/";
+import {CottageInfoArray} from "../../Assets/Cottages/";
 
 const CardContainer = () => (
   <Container>
-    {CottageInfo.map(values => {
+    {CottageInfoArray.map(values => {
       return <Card {...values} />;
     })}
   </Container>

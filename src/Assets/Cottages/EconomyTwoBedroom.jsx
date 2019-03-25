@@ -4,7 +4,7 @@ import IconPackage from "./SVG"; // Fæ öll icon og myndir héðan.
 const Title = `ECONOMY TWO BEDROOM`;
 const Price = `138`;
 const CoverPhoto = IconPackage.economyImage;
-
+const URL = `Economy`;
 const BlackbarInfo = [
   { Icon: `${IconPackage.sqIcon}`, Text: `34` },
   { Icon: `${IconPackage.personIcon}`, Text: `4-6` },
@@ -41,6 +41,7 @@ const Info = {
   BlackbarInfo,
   TextInformation,
   Includes,
-  SmallIcons
+  SmallIcons,
+  URL
 };
 export default Info;

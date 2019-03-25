@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import {Link} from 'react-router-dom';
 import LargeIcons from "./LargeIcons";
 import SmallIcon from "./SmallIcon";
 
-const Card = ({CoverPhoto, Title, BlackbarInfo, SmallIcons}) => (
+const Card = ({CoverPhoto, Title, BlackbarInfo, SmallIcons, URL}) => (
   <Container>
     <Image src={CoverPhoto} />
     <TitleText>{Title}</TitleText>
     <Line />
     <LargeIcons IconArray={BlackbarInfo} />
     <SmallIcon IconArray={SmallIcons} />
-    <Button>{`See More`} </Button>
+    <Button to={`/cottages/${URL}`} >{`See More`} </Button>
   </Container>
 );
 
@@ -49,7 +50,7 @@ const TitleText = styled.h1`
   font-weight: 200;
 `;
 
-const Button = styled.button`
+const Button = styled(Link)`
   width: 40%;
   height: 50px;
   display: flex;
