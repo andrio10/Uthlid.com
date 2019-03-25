@@ -15,7 +15,6 @@ import HorseRentInformation from "../../Assets/HorseRental"; /* Hérna fáum vi�
 const HorseRentalContainer = () => (
   <Container>
     <Header />
-    <BlackbarInformation />
     <CardContainer>
       <HorseInformation>
         {/* Fyrir hverja ferð búum við til HorseRentalCard sem er með upplýsingum um hvern túr. */}

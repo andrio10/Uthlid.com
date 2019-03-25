@@ -4,7 +4,7 @@ import IconPackage from "./SVG";
 const Title = `ONE BEDROOM COTTAGE`;
 const Price = `164`;
 const CoverPhoto = IconPackage.oneBedroom;
-
+const URL = `OneBedroom`;
 const BlackbarInfo = [
   { Icon: `${IconPackage.sqIcon}`, Text: `38` },
   { Icon: `${IconPackage.personIcon}`, Text: `2` },
@@ -50,6 +50,7 @@ const Info = {
   BlackbarInfo,
   TextInformation,
   Includes,
-  SmallIcons
+  SmallIcons,
+  URL
 };
 export default Info;

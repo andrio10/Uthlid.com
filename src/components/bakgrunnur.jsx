@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import BackgroundImg from '../Assets/MainSite/coverphoto.jpg';
 import "./cover.css";
 
 
@@ -7,8 +8,8 @@ import "./cover.css";
 class Bakgrunnur extends Component {
   render() {
     return (
-      <section className="cover">
-        <div className="mynd" />
+      <section className="Bakgrunnur">
+        <img src={BackgroundImg} />
       </section>
     );
   }
