@@ -27,7 +27,7 @@ class App extends Component {
 
           <Route path="/cottages/:id" component={SinglePageCottage} />
           <Route path="/cottages" component={CardContainer} />
-
+          <Route path="/horserental" component={HorseRentalContainer} />
           <Route path="/" component={Bakgrunnur}/>
         </Switch>
       </React.Fragment>

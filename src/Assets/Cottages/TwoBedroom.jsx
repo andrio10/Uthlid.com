@@ -5,10 +5,10 @@ const Title = `TWO BEDROOM COTTAGES`;
 const Price = `164`;
 const URL = `TwoBedroom`;
 const BlackbarInfo = [
-  { Icon: `${IconPackage.sqIcon}`, Text: `50-60` },
-  { Icon: `${IconPackage.personIcon}`, Text: `5-6` },
-  { Icon: `${IconPackage.discIcon}`, Text: `6` },
-  { Icon: `${IconPackage.bedIcon}`, Text: `1` }
+  { Icon: `${IconPackage.sqIcon}`, Text: `50`, IconBlack: `${IconPackage.m2Black}` },
+  { Icon: `${IconPackage.personIcon}`, Text: `5-6`, IconBlack: `${IconPackage.personsBlack}` },
+  { Icon: `${IconPackage.discIcon}`, Text: `6`, IconBlack: `${IconPackage.disksBlack}` },
+  { Icon: `${IconPackage.bedIcon}`, Text: `1`, IconBlack: `${IconPackage.bedBlack}` }
 ];
 
 const TextInformation = [

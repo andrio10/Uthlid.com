@@ -6,7 +6,6 @@
 
 */
 
-
 import economyImage from "./img_0028_wide.jpg";
 import oneBedroom from "./img_0021.jpg";
 import twoBedroom from "./img_0011n.jpg";
@@ -21,6 +20,10 @@ import stereoIcon from "./stereo.svg";
 import wifiIcon from "./wifi.svg";
 import tvIcon from "./tv.svg";
 import hottubIcon from "./hottub.svg";
+import bedBlack from "./bedBlack.svg";
+import disksBlack from "./disksBlack.svg";
+import m2Black from "./m2Black.svg";
+import personsBlack from "./personsBlack.svg";
 
 const IconPackage = {
   economyImage,
@@ -36,9 +39,11 @@ const IconPackage = {
   stereoIcon,
   wifiIcon,
   tvIcon,
-  hottubIcon
+  hottubIcon,
+  bedBlack,
+  disksBlack,
+  m2Black,
+  personsBlack
 };
 
 export default IconPackage;
-
-

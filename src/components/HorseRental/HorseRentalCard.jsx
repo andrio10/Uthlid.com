@@ -19,7 +19,7 @@ const HorseRentalCard = ({ Title, Price, Info, BackgroundImg }) => (
 export default HorseRentalCard;
 const Container = styled.div`
   height: 300px;
-  width: 400px;
+  width: 350px;
   display: flex;
   background-color: white;
   border-radius: 15px;
@@ -42,6 +42,7 @@ const BackgroundOpacity = styled.div`
   transition: all 1s ease;
   ${Container}:hover & {
     background-color: rgba(55, 55, 55, 0.8);
+    cursor: pointer;
   }
 `;
 

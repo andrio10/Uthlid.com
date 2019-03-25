@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import NumberSymbol from "./NumberSymbol";
 /*
 
   Information er ljósbrúni kassinn.
@@ -9,16 +9,17 @@ import styled from "styled-components";
 
 */
 
-
-
-const Information = ({Price, Title}) => (
+const Information = ({ Price, Title, horseInformation }) => (
   <Container>
-    <H1>{Title}</H1>
-    <Text>PRICES FROM</Text>
-    <NumberSymbol>
-      <Number> {Price} </Number>
-      <Symbol>€</Symbol>
-    </NumberSymbol>
+    <H1>{Title || `Bookings`}</H1>
+    {horseInformation ? <Text>PRICELIST</Text> : <Text>PRICES FROM</Text>}
+    <NumberSymbol Price={Price} />
+    {horseInformation ? (
+      <AboutText>
+        All trips are great riding tours around the unspoiled and beautiful
+        landscape of Úthlíð.
+      </AboutText>
+    ) : null}
     <EmailContainer>
       <EmailText>Email</EmailText>
       <EmailText fat>uthlid@uthlid.is</EmailText>
@@ -27,7 +28,7 @@ const Information = ({Price, Title}) => (
       <EmailText>Phone</EmailText>
       <EmailText fat>+354 699 5500</EmailText>
     </EmailContainer>
-    <Button>Check Availability</Button>
+    {horseInformation ? null : <Button>Check Availability</Button>}
   </Container>
 );
 export default Information;
@@ -49,36 +50,23 @@ const H1 = styled.h1`
   margin: 10px auto;
   display: flex;
   font-weight: 900;
-`;
-
-const Text = styled.h3`
-  font-size: 26px;
-  letter-spacing: -1px;
-  font-weight: 100;
-  display: flex;
-  margin: 10px auto;
   text-transform: uppercase;
 `;
 
-const NumberSymbol = styled.div`
-  height: 120px;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 40px;
-`;
-
-const Number = styled.h3`
-  font-size: 60px;
-  font-weight: 600;
-`;
-
-const Symbol = styled(Number)`
+const Text = styled.h3`
+  font-size: 20px;
+  letter-spacing: -1px;
   font-weight: 100;
-  margin: 10px;
-  font-size: 40px;
+  display: flex;
+  margin: 0px auto;
+  text-transform: uppercase;
+`;
+
+const AboutText = styled.h5`
+width: 80%;
+font-weight: 300;
+margin: 0px;
+padding: 0px;
 `;
 
 const EmailText = styled(Text)`
@@ -107,4 +95,8 @@ const Button = styled.button`
   border: none;
   text-transform: uppercase;
   margin-bottom: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
