@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import LargeIcons from "./LargeIcons";
 import SmallIcon from "./SmallIcon";
 
-const Card = ({CoverPhoto, Title, BlackbarInfo, SmallIcons, URL}) => (
+const Card = ({ CoverPhoto, Title, BlackbarInfo, SmallIcons, URL }) => (
   <Container>
     <Image src={CoverPhoto} />
     <TitleText>{Title}</TitleText>
     <Line />
     <LargeIcons IconArray={BlackbarInfo} />
-    <SmallIcon IconArray={SmallIcons} /> 
-    <Button to={`/cottages/${URL}`} >{`See More`} </Button>
+    <SmallIcon IconArray={SmallIcons} />
+    <Button to={`/cottages/${URL}`}>{`See More `} &nbsp; &nbsp; &#x2192; </Button>
   </Container>
 );
 
@@ -55,21 +55,29 @@ const Button = styled(Link)`
   height: 50px;
   display: flex;
   margin: 20px auto;
-  border: 2px #c6bbac solid;
+  border: none;
   justify-content: center;
   align-items: center;
   color: #373737;
-  border-radius: 20px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  font-size: 12px;
-  text-transform: uppercase;
-  background-color: #dcd0c0;
+  border-radius: 25px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  font-size: 14px;
+  background-color: white;
+  box-shadow: 0px 8px 20px -15px #373737;
   cursor: pointer;
-
+  transition: 0.5s all;
   &:hover {
     color: inherit;
     text-decoration: none;
-    border: 2px #9e9589 solid;
+    box-shadow: 0px 8px 40px -15px #373737;
+    transform: translateY(-3px);
+  }
+
+  &:active {
+    color: inherit;
+    text-decoration: none;
+    box-shadow: none;
+    transform: translateY(5px);
   }
 `;

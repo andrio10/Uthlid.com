@@ -5,7 +5,7 @@ import Header from "./Header";
 import BlackbarInformation from "../Reusable/BlackbarInformation/BlackbarInformation";
 import TextContainer from "./TextContainer";
 import { CottageInfoOjbect } from "../../Assets/Cottages/"; // CottageInfoOjbect inniheldur upplýsingar um alla sumarbústaðina.
-
+import Layout from '../Reusable/Layout';
 // Síðan fyrir hvern og einn sumarbúsað.
 
 function SinglePageCottage(props) {
@@ -18,22 +18,13 @@ function SinglePageCottage(props) {
   });
 
   return (
-    <Container>
+    <Layout>
       <Header {...Information} />{" "}
       {/* Sendi niður upplýsingarnar í gegnum props. */}
       <BlackbarInformation horseInformation={false} {...Information}/>
       <TextContainer {...Information} />
-    </Container>
+    </Layout>
   );
 }
 export default SinglePageCottage;
 
-const Container = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  width: 75vw;
-  margin: 30px auto;
-`;

@@ -3,7 +3,7 @@ import BackgroundImg from '../Assets/MainSite/coverphoto.jpg';
 import "./cover.css";
 
 
-// Tók myndina í cover.css út því að hún er alltof stór til að vera að refresha með í hvert skipti sem að þú prufar eh.
+// Tók myndina í cover.css út því að hún er alltof stór til að vera að refresha í hvert skipti sem að þú prufar eh.
 
 class Bakgrunnur extends Component {
   render() {

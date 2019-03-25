@@ -9,7 +9,7 @@ import styled from "styled-components";
   
 */
 
-const Blackbar = ({ Info }, horseInformation) => (
+const Blackbar = ({ Info , horseInformation}) => (
   <Container horseInformation={horseInformation}>
     {!horseInformation ? Info.map(values => {
       return (
@@ -43,8 +43,8 @@ const Row = styled.div`
 
 const Icon = styled.img`
   display: flex;
-  height: 50px;
-  width: 50px;
+  height: 35px;
+  width: 35px;
   fill: white;
   color: white;
 `;

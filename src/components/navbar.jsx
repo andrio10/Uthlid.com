@@ -7,7 +7,7 @@ class NavBar extends Component {
     return (
       <div className="cover">
         <div className="cover-container">
-          <h1 className="cover-heading">Úthlíð</h1>
+          <Link to="/" className="cover-heading">Úthlíð</Link>
         </div>
         <nav>
           <ul>
@@ -18,7 +18,7 @@ class NavBar extends Component {
               <Link to="/horserental">Horse Rental</Link>
             </li>
             <li>
-              <a href="index.html">Golf</a>
+              <Link to="/golf"> Golf </Link>
             </li>
           </ul>
         </nav>
