@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import Blackbar from './Blackbar';
-import Information from './Information';
+import React from "react";
+import styled from "styled-components";
+import Blackbar from "./Blackbar";
+import Information from "./Information";
 
 /*
 
@@ -14,22 +14,28 @@ import Information from './Information';
 
 */
 
-
-const BlackbarInformation = ({BlackbarInfo, Price, Title, horseInformation}) => (
-    <Container>
-        <Blackbar Info={BlackbarInfo} horseInformation={horseInformation}/>
-        <Information Price={Price} Title={Title} horseInformation={horseInformation}/>
-    </Container>
+const BlackbarInformation = ({
+  BlackbarInfo,
+  Price,
+  Title,
+  horseInformation
+}) => (
+  <Container>
+    <Blackbar Info={BlackbarInfo} horseInformation={horseInformation} />
+    <Information
+      Price={Price}
+      Title={Title}
+      horseInformation={horseInformation}
+    />
+  </Container>
 );
-
 
 export default BlackbarInformation;
 
-
 const Container = styled.div`
-    display: flex;
-    width: 80%;
-    margin: 0px auto;
-    height: 1px;
-    align-items: center;
+  display: flex;
+  width: 80%;
+  margin: 0px auto;
+  height: 1px;
+  align-items: center;
 `;

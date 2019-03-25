@@ -3,9 +3,11 @@ import styled from "styled-components";
 import BlackbarInformation from "../Reusable/BlackbarInformation/BlackbarInformation";
 import Header from "../SinglePageCottage/Header";
 import HorseRentalCard from "./HorseRentalCard";
+import Layout from '../Reusable/Layout';
 import HorseRentInformation from "../../Assets/HorseRental"; /* Hérna fáum við upplýsingarnar um hverja ferð. 
                                                               Þurfum ekki að gera /index.js því að javascript leitar að henni automatískt. */
 import HorseBackground from '../../Assets/HorseRental/k3_9089.jpg';
+
 /*
 
   Horse Rental Container sýnir þær ferðir sem að boðið er upp á.
@@ -19,7 +21,7 @@ const Price = [
 ]
 
 const HorseRentalContainer = () => (
-  <Container>
+  <Layout>
     <Header CoverPhoto={HorseBackground}/> 
     <BlackbarInformation horseInformation={true} Price={Price}/>
     <CardContainer>
@@ -31,19 +33,10 @@ const HorseRentalContainer = () => (
       </HorseInformation>
       <FakeContainer />
     </CardContainer>
-  </Container>
+  </Layout>
 );
 
 export default HorseRentalContainer;
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  width: 75vw;
-  margin: 30px auto;
-  flex-direction: column;
-`;
 
 const HorseInformation = styled.div`
   height: 100%;

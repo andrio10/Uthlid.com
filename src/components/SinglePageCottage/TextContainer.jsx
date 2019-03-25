@@ -13,7 +13,6 @@ import Add from "../../Assets/Cottages/SVG/add.svg"; // Er að ná í plús Icon
 const TextContainer = ({ TextInformation, Includes }) => (
   <Container>
     <Textbox>
-      
       {TextInformation.map(values => {
         return (
           <Text>
@@ -35,6 +34,7 @@ const TextContainer = ({ TextInformation, Includes }) => (
           })}
         </TextIncludes>
       ) : null}
+      {/* Hingað */}
     </Textbox>
     <FakeContainer />
   </Container>
