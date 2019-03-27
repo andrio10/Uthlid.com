@@ -21,6 +21,7 @@ const TextInformation = [
   }
 ];
 
+const InformationBoxPrice = `Prices From`;
 const Includes = [
   `WiFi`,
   `Fully Equipped Kitchen`,
@@ -48,6 +49,7 @@ const Info = {
   TextInformation,
   Includes,
   SmallIcons,
-  URL
+  URL,
+  InformationBoxPrice
 };
 export default Info;

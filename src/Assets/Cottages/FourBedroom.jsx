@@ -4,6 +4,9 @@ const Title = `FOUR BEDROOM COTTAGES`;
 const Price = `282`;
 const CoverPhoto = IconPackage.fourBedroom;
 const URL = `Fourbedroom`;
+
+
+const InformationBoxPrice = `Prices From`;
 const BlackbarInfo = [
   { Icon: `${IconPackage.sqIcon}`, Text: `130`, IconBlack: `${IconPackage.m2Black}` },
   { Icon: `${IconPackage.personIcon}`, Text: `8`, IconBlack: `${IconPackage.personsBlack}` },
@@ -48,6 +51,7 @@ const Info = {
   TextInformation,
   Includes,
   SmallIcons,
-  URL
+  URL,
+  InformationBoxPrice
 };
 export default Info;

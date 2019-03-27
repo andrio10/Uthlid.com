@@ -5,6 +5,7 @@ const Title = `ECONOMY TWO BEDROOM`;
 const Price = `138`;
 const CoverPhoto = IconPackage.economyImage;
 const URL = `Economy`;
+const InformationBoxPrice = `Prices From`;
 const BlackbarInfo = [
   { Icon: `${IconPackage.sqIcon}`, Text: `34`, IconBlack: `${IconPackage.m2Black}` },
   { Icon: `${IconPackage.personIcon}`, Text: `4-6`, IconBlack: `${IconPackage.personsBlack}` },
@@ -42,6 +43,7 @@ const Info = {
   TextInformation,
   Includes,
   SmallIcons,
-  URL
+  URL,
+  InformationBoxPrice
 };
 export default Info;

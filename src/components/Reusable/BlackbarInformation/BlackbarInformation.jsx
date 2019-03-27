@@ -14,19 +14,11 @@ import Information from "./Information";
 
 */
 
-const BlackbarInformation = ({
-  BlackbarInfo,
-  Price,
-  Title,
-  horseInformation
-}) => (
+const BlackbarInformation = Data => (
   <Container>
-    <Blackbar Info={BlackbarInfo} horseInformation={horseInformation} />
-    <Information
-      Price={Price}
-      Title={Title}
-      horseInformation={horseInformation}
-    />
+    {console.log(Data)}
+    <Blackbar {...Data} />
+    <Information {...Data} />
   </Container>
 );
 
