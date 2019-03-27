@@ -9,9 +9,9 @@ import styled from "styled-components";
   
 */
 
-const Blackbar = ({ Info , horseInformation}) => (
+const Blackbar = ({ BlackbarInfo , horseInformation}) => (
   <Container horseInformation={horseInformation}>
-    {!horseInformation ? Info.map(values => {
+    {!horseInformation ? BlackbarInfo.map(values => {
       return (
         <Row>
           <Icon src={values.Icon} />

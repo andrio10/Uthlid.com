@@ -11,7 +11,9 @@ const Card = ({ CoverPhoto, Title, BlackbarInfo, SmallIcons, URL }) => (
     <Line />
     <LargeIcons IconArray={BlackbarInfo} />
     <SmallIcon IconArray={SmallIcons} />
-    <Button to={`/cottages/${URL}`}>{`See More `} &nbsp; &nbsp; &#x2192; </Button>
+    <Button to={`/cottages/${URL}`}>
+      {`See More `} &nbsp; &nbsp; &#x2192;{" "}
+    </Button>
   </Container>
 );
 
@@ -66,7 +68,7 @@ const Button = styled(Link)`
   background-color: white;
   box-shadow: 0px 8px 20px -15px #373737;
   cursor: pointer;
-  transition: 0.5s all;
+  transition: 0.2s all;
   &:hover {
     color: inherit;
     text-decoration: none;

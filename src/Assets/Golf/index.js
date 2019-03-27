@@ -14,6 +14,20 @@ const BlackbarInfo = [
   { Icon: `${open}`, Text: `June Sept` }
 ];
 
+const InformationBoxPrice = `Day Fees`;
+
+const Price = [
+  {
+    Title: `Single`,
+    Price: `3.200`
+  },
+  {
+    Title: `Couples`,
+    Price: `5.000`
+  }
+];
+
+
 const TextInformation = [
   {
     Title: `Information`,
@@ -34,7 +48,9 @@ const Info = {
   CoverPhoto,
   TextInformation,
   Includes,
-  BlackbarInfo
+  BlackbarInfo,
+  InformationBoxPrice,
+  Price
 };
 
 export default Info;

@@ -23,7 +23,7 @@ body {
   margin: 0;
 }
 .cover {
-  background: white;
+  background: transparent;
   padding-top: 30px;
   min-height: 70px;
   width: 90%;

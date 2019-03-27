@@ -11,7 +11,8 @@ const Container = styled.div`
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 75vw;
-  margin: 30px auto;
+  margin: 0px auto;
+  background-color: white!important;
 `;

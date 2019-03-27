@@ -3,10 +3,10 @@ import styled from "styled-components";
 import BlackbarInformation from "../Reusable/BlackbarInformation/BlackbarInformation";
 import Header from "../SinglePageCottage/Header";
 import HorseRentalCard from "./HorseRentalCard";
-import Layout from '../Reusable/Layout';
+import Layout from "../Reusable/Layout";
 import HorseRentInformation from "../../Assets/HorseRental"; /* Hérna fáum við upplýsingarnar um hverja ferð. 
                                                               Þurfum ekki að gera /index.js því að javascript leitar að henni automatískt. */
-import HorseBackground from '../../Assets/HorseRental/k3_9089.jpg';
+import HorseBackground from "../../Assets/HorseRental/k3_9089.jpg";
 
 /*
 
@@ -15,15 +15,15 @@ import HorseBackground from '../../Assets/HorseRental/k3_9089.jpg';
 */
 
 const Price = [
-  {Title: `.5 hours`, Price: `50`},
-  {Title: `1  hours`, Price: `60`},
-  {Title: `2  hours`, Price: `100`}
-]
+  { Title: `.5 hours`, Price: `50` },
+  { Title: `1  hours`, Price: `60` },
+  { Title: `2  hours`, Price: `100` }
+];
 
 const HorseRentalContainer = () => (
   <Layout>
-    <Header CoverPhoto={HorseBackground}/> 
-    <BlackbarInformation horseInformation={true} Price={Price}/>
+    <Header CoverPhoto={HorseBackground} />
+    <BlackbarInformation horseInformation={true} Price={Price} />
     <CardContainer>
       <HorseInformation>
         {/* Fyrir hverja ferð búum við til HorseRentalCard sem er með upplýsingum um hvern túr. */}
