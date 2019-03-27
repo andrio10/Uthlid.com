@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import NumberSymbol from "./NumberSymbol";
+import ContactInfo from "./contactInfo";
 /*
 
   Information er ljósbrúni kassinn.
@@ -9,10 +10,20 @@ import NumberSymbol from "./NumberSymbol";
 
 */
 
-const Information = ({ Price, Title, horseInformation }) => (
+const Information = ({
+  Price,
+  Title,
+  horseInformation,
+  InformationBoxPrice,
+  golf
+}) => (
   <Container>
     <H1>{Title || `Bookings`}</H1>
-    {horseInformation ? <Text>PRICELIST</Text> : <Text>PRICES FROM</Text>}
+    {InformationBoxPrice ? (
+      <Text>{InformationBoxPrice}</Text>
+    ) : (
+      <Text>Pricelist</Text>
+    )}
     <NumberSymbol Price={Price} />
     {horseInformation ? (
       <AboutText>
@@ -20,15 +31,13 @@ const Information = ({ Price, Title, horseInformation }) => (
         landscape of Úthlíð.
       </AboutText>
     ) : null}
-    <EmailContainer>
-      <EmailText>Email</EmailText>
-      <EmailText fat>uthlid@uthlid.is</EmailText>
-    </EmailContainer>
-    <EmailContainer>
-      <EmailText>Phone</EmailText>
-      <EmailText fat>+354 699 5500</EmailText>
-    </EmailContainer>
-    {horseInformation ? null : <Button>Check Availability</Button>}
+    {golf ? (
+      <AboutText>
+        Members of the Icelandic Golf Union can book tee times at www.golf.is
+      </AboutText>
+    ) : null}
+    <ContactInfo />
+    {horseInformation || golf ? null : <Button>Check Availability</Button>}
   </Container>
 );
 export default Information;
@@ -42,6 +51,7 @@ const Container = styled.div`
   margin-top: 100px;
   justify-content: space-around;
   color: #373737;
+  z-index: 5;
   align-items: center;
 `;
 const H1 = styled.h1`
@@ -63,24 +73,10 @@ const Text = styled.h3`
 `;
 
 const AboutText = styled.h5`
-width: 80%;
-font-weight: 300;
-margin: 0px;
-padding: 0px;
-`;
-
-const EmailText = styled(Text)`
-  margin: 0px 20px;
-  text-transform: none;
-  font-weight: ${props => (props.fat ? `900` : `100`)};
-`;
-
-const EmailContainer = styled.div`
-  height: 35px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  width: 80%;
+  font-weight: 300;
+  margin: 0px;
+  padding: 0px;
 `;
 
 const Button = styled.button`

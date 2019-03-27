@@ -8,6 +8,7 @@ const NumberSymbol = ({ Price }) => (
     {/* Ef að Price er stök tala setjum við það beint inn. Sem er tilvikið fyrir Cottages*/}
       {Array.isArray(Price) ? (
         Price.map(values => {
+          {console.log(values)}
           return (
             <Row>
               <Text> {values.Title} </Text>
@@ -28,7 +29,6 @@ const NumberSymbol = ({ Price }) => (
 export default NumberSymbol;
 
 const Container = styled.div`
-  height: 120px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;

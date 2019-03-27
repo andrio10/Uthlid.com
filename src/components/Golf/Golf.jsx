@@ -14,7 +14,7 @@ import Info from '../../Assets/Golf/index';
 const Golf = () => (
     <Layout>
         <Header CoverPhoto={Info.CoverPhoto}/>
-        <BlackbarInformation horseInformation={false} {...Info}/>
+        <BlackbarInformation golf={true} horseInformation={false} {...Info}/>
         <TextContainer {...Info}  />
     </Layout>
 );
