@@ -23,10 +23,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #f4f4f4;
+  background-color: #F4F4F4!important;
   height: 700px;
   width: 500px;
-  border-radius: 5%;
   overflow: hidden;
   margin: 30px auto;
 `;
@@ -57,16 +56,14 @@ const Button = styled(Link)`
   height: 50px;
   display: flex;
   margin: 20px auto;
-  border: none;
+  border: 2px solid #C0B283;
   justify-content: center;
   align-items: center;
-  color: #373737;
-  border-radius: 25px;
+  color: #C0B283;
   font-weight: 600;
   letter-spacing: 0px;
   font-size: 14px;
-  background-color: white;
-  box-shadow: 0px 8px 20px -15px #373737;
+  background-color: #373737;
   cursor: pointer;
   transition: 0.2s all;
   &:hover {
@@ -76,10 +73,4 @@ const Button = styled(Link)`
     transform: translateY(-3px);
   }
 
-  &:active {
-    color: inherit;
-    text-decoration: none;
-    box-shadow: none;
-    transform: translateY(5px);
-  }
 `;

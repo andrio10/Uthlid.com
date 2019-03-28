@@ -2,7 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 
 // Breidd síðunar svo að hún er jöfn yfir allar undirsíður.
-const Layout = props => <Container>{props.children}</Container>;
+const Layout = props => <Container myColor = {props.myColor}>{props.children}</Container>;
 
 export default Layout;
 
@@ -13,6 +13,7 @@ const Container = styled.div`
   align-items: center;
   min-height: 100vh;
   width: 75vw;
-  margin: 0px auto;
-  background-color: white!important;
+  padding-bottom: 50px;
+  margin: 100px auto;
+  background-color: ${props => props.myColor ? props.myColor : "white!important" };
 `;

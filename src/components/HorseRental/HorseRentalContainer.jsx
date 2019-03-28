@@ -9,10 +9,8 @@ import HorseRentInformation from "../../Assets/HorseRental"; /* Hérna fáum vi�
 import HorseBackground from "../../Assets/HorseRental/k3_9089.jpg";
 
 /*
-
   Horse Rental Container sýnir þær ferðir sem að boðið er upp á.
-
-*/
+ */
 
 const Price = [
   { Title: `.5 hours`, Price: `50` },
