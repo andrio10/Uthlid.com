@@ -8,6 +8,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import SinglePageCottage from "./components/SinglePageCottage/SinglePageCottage";
 import HorseRentalContainer from "./components/HorseRental/HorseRentalContainer";
 import Golf from "./components/Golf/Golf";
+
 import Container from "./components/LoadingSite/Container";
 import Sidebar from "./components/Sidebar/Container";
 import Camping from "./components/Camping/CampingContainer";
