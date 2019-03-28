@@ -8,8 +8,11 @@ import styled, { createGlobalStyle } from "styled-components";
 import SinglePageCottage from "./components/SinglePageCottage/SinglePageCottage";
 import HorseRentalContainer from "./components/HorseRental/HorseRentalContainer";
 import Golf from "./components/Golf/Golf";
+
 import Container from "./components/LoadingSite/Container";
 import Sidebar from "./components/Sidebar/Container";
+import Camping from "./components/Camping/CampingContainer";
+
 
 // GlobalStyles er frá Styled-Components, er að nota það til að ákveða font fyrir alla síðuna.
 const GlobalStyles = createGlobalStyle`
@@ -38,7 +41,10 @@ class App extends Component {
           <Route path="/cottages" component={CardContainer} />
           <Route path="/horserental" component={HorseRentalContainer} />
           <Route path="/golf" component={Golf} />
-          <Route path="/" component={Container} />
+
+          <Route path="/camping" component={Camping} />
+          <Route path="/" component={Bakgrunnur} />
+
         </Switch>
       </AppContainer>
     );
