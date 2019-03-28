@@ -126,6 +126,7 @@ const Container = styled.div`
   height: 100vh;
   width: ${props => (props.Position === `right` ? `28vw` : `12.1vw`)};
   position: fixed;
+  z-index: 500;
   top: 0;
   margin-left: ${props => (props.move ? "0px" : "-170px")};
   margin-right: ${props => (props.moveRight ? "0px" : "-469px")};
@@ -133,7 +134,7 @@ const Container = styled.div`
   background-color: #373737;
   flex-direction: column;
   justify-content: flex-start;
-  transition: all 0.4s ease-in;
+  transition: all 0.4s cubic-bezier(.23,.56,.54,1.01);
   border-left: ${props =>
     props.Position === `right` ? `1px solid #c0b283` : null};
   border-right: ${props =>
