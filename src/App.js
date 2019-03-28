@@ -13,7 +13,6 @@ import Container from "./components/LoadingSite/Container";
 import Sidebar from "./components/Sidebar/Container";
 import Camping from "./components/Camping/CampingContainer";
 
-
 // GlobalStyles er frá Styled-Components, er að nota það til að ákveða font fyrir alla síðuna.
 const GlobalStyles = createGlobalStyle`
   body {
@@ -43,7 +42,7 @@ class App extends Component {
           <Route path="/golf" component={Golf} />
 
           <Route path="/camping" component={Camping} />
-          <Route path="/" component={Bakgrunnur} />
+          <Route path="/" component={Container} />
 
         </Switch>
       </AppContainer>
