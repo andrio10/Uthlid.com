@@ -8,6 +8,8 @@ import styled, { createGlobalStyle } from "styled-components";
 import SinglePageCottage from "./components/SinglePageCottage/SinglePageCottage";
 import HorseRentalContainer from "./components/HorseRental/HorseRentalContainer";
 import Golf from "./components/Golf/Golf";
+import Container from "./components/LoadingSite/Container";
+import Sidebar from "./components/Sidebar/Container";
 
 // GlobalStyles er frá Styled-Components, er að nota það til að ákveða font fyrir alla síðuna.
 const GlobalStyles = createGlobalStyle`
@@ -16,6 +18,8 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Raleway', serif !important;
     background-color: #F4F4F4!important;
     height: 100%;
+    position: relative;
+    overflow-x: hidden;
   }
 `;
 class App extends Component {
@@ -23,7 +27,10 @@ class App extends Component {
     return (
       <AppContainer>
         <GlobalStyles />
-        <NavBar />
+        {/* <NavBar /> */ }
+        <Bakgrunnur />
+        <Sidebar Position={`left`} />
+        <Sidebar Position={`right`} />
         <Switch>
           {/* Nauðsynlegt að hafa path=/ neðst, annars fer React-Router alltaf á fyrstu heimasíðuna */}
 
@@ -31,7 +38,7 @@ class App extends Component {
           <Route path="/cottages" component={CardContainer} />
           <Route path="/horserental" component={HorseRentalContainer} />
           <Route path="/golf" component={Golf} />
-          <Route path="/" component={Bakgrunnur} />
+          <Route path="/" component={Container} />
         </Switch>
       </AppContainer>
     );
