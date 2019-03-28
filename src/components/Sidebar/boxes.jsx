@@ -28,7 +28,7 @@ const Container = styled.button`
   background-color: transparent;
   position: relative;
   justify-content: center;
-  transition: all .4s ease-in;
+  transition: all 0.4s cubic-bezier(.23,.56,.54,1.01);
   z-index: 3;
   padding: 0px;
   margin: ${props => props.expand ? "130px 4px" : "4px 4px"};

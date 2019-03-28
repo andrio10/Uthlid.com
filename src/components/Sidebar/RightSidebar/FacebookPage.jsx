@@ -23,4 +23,5 @@ const Container = styled.div`
   display: flex;
   width: 320px;
   height: 200px;
+  z-index: 501;
 `;
