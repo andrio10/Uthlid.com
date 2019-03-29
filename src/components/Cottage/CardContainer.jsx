@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "./card";
-import { CottageInfoArray } from "../../Assets/Cottages/";
 import Layout from "../Reusable/Layout";
+import Bakgrunnur from "../bakgrunnur";
+
+import { CottageInfoArray } from "../../Assets/Cottages/";
 
 const CardContainer = () => (
+  <>
+  <Bakgrunnur />
   <Layout>
     <H1> Cottages </H1>
     <MapCardContainer>
@@ -13,6 +17,7 @@ const CardContainer = () => (
       })}
     </MapCardContainer>
   </Layout>
+  </>
 );
 
 export default CardContainer;

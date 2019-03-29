@@ -65,12 +65,9 @@ const Button = styled(Link)`
   font-size: 14px;
   background-color: #373737;
   cursor: pointer;
-  transition: 0.2s all;
-  &:hover {
-    color: inherit;
-    text-decoration: none;
-    box-shadow: 0px 8px 40px -15px #373737;
-    transform: translateY(-3px);
-  }
 
+  &:hover {
+    color: #C0B283;
+    text-decoration: none;
+  }
 `;
