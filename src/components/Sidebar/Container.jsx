@@ -15,7 +15,8 @@ const RowInformation = [
     Icon: `${Icons.HorseRentalIcon}`
   },
   { Title: `Golf`, Path: `/Golf`, Icon: `${Icons.GolfIcon}` },
-  { Title: `Camping`, Path: `/Camping`, Icon: `${Icons.CampingIcon}` }
+  { Title: `Camping`, Path: `/Camping`, Icon: `${Icons.CampingIcon}` },
+  { Title: `Restaurant`, Path: `/Restaurant`, Icon: `${Icons.InfoIcon}` }
 ];
 
 function Sidebar({ Position }) {
@@ -134,7 +135,7 @@ const Container = styled.div`
   background-color: #373737;
   flex-direction: column;
   justify-content: flex-start;
-  transition: all 0.4s cubic-bezier(.23,.56,.54,1.01);
+  transition: all 0.4s cubic-bezier(0.23, 0.56, 0.54, 1.01);
   border-left: ${props =>
     props.Position === `right` ? `1px solid #c0b283` : null};
   border-right: ${props =>
