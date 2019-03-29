@@ -15,7 +15,8 @@ const RowInformation = [
     Icon: `${Icons.HorseRentalIcon}`
   },
   { Title: `Golf`, Path: `/Golf`, Icon: `${Icons.GolfIcon}` },
-  { Title: `Camping`, Path: `/Camping`, Icon: `${Icons.CampingIcon}` }
+  { Title: `Camping`, Path: `/Camping`, Icon: `${Icons.CampingIcon}` },
+  { Title: `Restaurant`, Path: `/Restaurant`, Icon: `${Icons.InfoIcon}` }
 ];
 
 function Sidebar({ Position }) {

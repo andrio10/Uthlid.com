@@ -12,6 +12,7 @@ import Golf from "./components/Golf/Golf";
 import Container from "./components/LoadingSite/Container";
 import Sidebar from "./components/Sidebar/Container";
 import Camping from "./components/Camping/CampingContainer";
+import Restaurant from "./components/Restaurant/RestaurantContainer";
 
 // GlobalStyles er frá Styled-Components, er að nota það til að ákveða font fyrir alla síðuna.
 const GlobalStyles = createGlobalStyle`
@@ -29,7 +30,8 @@ class App extends Component {
     return (
       <AppContainer>
         <GlobalStyles />
-        {/* <NavBar /> */ }
+        {/* <NavBar /> */}
+        <Bakgrunnur />
         <Sidebar Position={`left`} />
         <Sidebar Position={`right`} />
         <Switch>
@@ -41,8 +43,8 @@ class App extends Component {
           <Route path="/golf" component={Golf} />
 
           <Route path="/camping" component={Camping} />
+          <Route path="/restaurant" component={Restaurant} />
           <Route path="/" component={Container} />
-
         </Switch>
       </AppContainer>
     );
@@ -51,8 +53,6 @@ class App extends Component {
 
 export default App;
 
-
 const AppContainer = styled.div`
   min-height: 100vh;
-
 `;
