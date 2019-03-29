@@ -31,7 +31,6 @@ class App extends Component {
       <AppContainer>
         <GlobalStyles />
         {/* <NavBar /> */}
-        <Bakgrunnur />
         <Sidebar Position={`left`} />
         <Sidebar Position={`right`} />
         <Switch>
