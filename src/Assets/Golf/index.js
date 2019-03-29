@@ -2,15 +2,14 @@ import CoverPhoto from "./img_4335.jpg";
 
 // SVG IMPORT
 import golf from "./svg/001-golf.svg";
-import yellowTees from './svg/005-tee.svg';
-import redTees from './svg/006-tee.svg';
+import Tees from './svg/005-tee.svg';
 import open from './svg/004-open.svg';
 
 
 const BlackbarInfo = [
   { Icon: `${golf}`, Text: `Par 35` },
-  { Icon: `${yellowTees}`, Text: `2470m` },
-  { Icon: `${redTees}`, Text: `2118m` },
+  { Icon: `${Tees}`, Text: `2470m` },
+  { Icon: `${Tees}`, Text: `2118m` },
   { Icon: `${open}`, Text: `June Sept` }
 ];
 

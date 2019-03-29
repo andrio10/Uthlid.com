@@ -1,6 +1,9 @@
 import React from "react";
+
 import Layout from "../Reusable/Layout";
 import Card from "./Card";
+import Bakgrunnur from '../bakgrunnur';
+
 // Sækja myndir úr Assets fyrir hverja röð.
 import CottagesImage from "../../Assets/Cottages/SVG/img_0021.jpg";
 import GolfImage from "../../Assets/Golf/img_4335.jpg";
@@ -30,6 +33,8 @@ const RowInformation = [
 ];
 
 const LoadingSiteContainer = () => (
+  <>
+  <Bakgrunnur />
   <Layout myColor={`transparent`}>
     {/* Ef að röð er slétt tala kemur svartur bakgrunnur, ef að það er oddatala verður hann hvítur. */}
     {RowInformation.map((values, index) => {
@@ -40,6 +45,7 @@ const LoadingSiteContainer = () => (
       }
     })}
   </Layout>
+  </>
 );
 
 export default LoadingSiteContainer;

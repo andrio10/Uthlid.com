@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 import Boxes from "./boxes";
 import Checkbox from "./Checkbox";
 import RightSidebar from "./RightSidebar/RightSidebar";
@@ -39,7 +39,7 @@ function Sidebar({ Position }) {
           <HalfHeight>
             {/* Burger Menu */}
             <Row>
-              <TextTitle> Úthlíð </TextTitle>
+              <TextTitle to="/"> Úthlíð </TextTitle>
               <Checkbox myFunc={Show}>
                 <Line1 />
                 <Line2 />
@@ -134,7 +134,7 @@ const Container = styled.div`
   background-color: #373737;
   flex-direction: column;
   justify-content: flex-start;
-  transition: all 0.4s cubic-bezier(.23,.56,.54,1.01);
+  transition: all 0.4s cubic-bezier(0.23, 0.56, 0.54, 1.01);
   border-left: ${props =>
     props.Position === `right` ? `1px solid #c0b283` : null};
   border-right: ${props =>
@@ -145,7 +145,7 @@ const ContainerRight = styled(Container)`
   flex-direction: row;
 `;
 
-const TextTitle = styled.h3`
+const TextTitle = styled(Link)`
   box-sizing: border-box;
   width: 80%;
   background-color: #c0b283;
@@ -159,6 +159,12 @@ const TextTitle = styled.h3`
   border: 2px solid #373737;
   text-transform: uppercase;
   font-size: 16px;
+
+  &:hover {
+    outline: none;
+    color: #373737;
+    text-decoration: none;
+  }
 `;
 
 const Line = styled.div`

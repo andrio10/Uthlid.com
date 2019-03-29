@@ -6,7 +6,6 @@ import styled from "styled-components";
   Fáum Info frá BlackbarInformation í gegnum props. Í Info eru Iconin og tölurnar sem að við þurfum að sýna fyrir sumarbústaðina.
   Ferðin sem að Info fer: Assets -> SinglePageCottage -> BlackbarInfo -> Blackbar.jsx.
   
-  
 */
 
 const Blackbar = ({ BlackbarInfo , horseInformation}) => (

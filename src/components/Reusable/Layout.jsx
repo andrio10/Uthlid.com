@@ -13,7 +13,7 @@ const Container = styled.div`
   align-items: center;
   min-height: 100vh;
   width: 75vw;
-  padding-bottom: 50px;
-  margin: 100px auto;
+  padding-bottom: 30px;
+  margin: 0px auto;
   background-color: ${props => props.myColor ? props.myColor : "white!important" };
 `;

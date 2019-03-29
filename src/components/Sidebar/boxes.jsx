@@ -37,10 +37,13 @@ const Container = styled.button`
 
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     cursor: pointer;
     outline: none;
-  }
+    background-color: #c0b283;
+    border: 2px solid #373737;
+      }
 `;
 
 const Clickable = styled(Link)`
@@ -57,4 +60,14 @@ const SingleIcon = styled.img`
   margin: 0px;
   background-image: url(${props => props.src});
   background-size: cover;
+  
+  ${Container}:hover &{
+    filter: invert(50%) sepia(0%) saturate(80%) hue-rotate(143deg) brightness(20%) contrast(71%);
+  }
+  ${Container}:active &{
+    filter: invert(50%) sepia(0%) saturate(80%) hue-rotate(143deg) brightness(20%) contrast(71%);
+  }
+  ${Container}:focus &{
+    filter: invert(50%) sepia(0%) saturate(80%) hue-rotate(143deg) brightness(20%) contrast(71%);
+  }
 `;

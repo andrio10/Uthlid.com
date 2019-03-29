@@ -23,12 +23,16 @@ const HorseRentalContainer = () => (
     <Header CoverPhoto={HorseBackground} />
     <BlackbarInformation horseInformation={true} Price={Price} />
     <CardContainer>
+      <Row>
+      <H1> Trips </H1>
       <HorseInformation>
         {/* Fyrir hverja ferð búum við til HorseRentalCard sem er með upplýsingum um hvern túr. */}
         {HorseRentInformation.map(values => {
           return <HorseRentalCard {...values} />;
         })}
       </HorseInformation>
+      </Row>
+
       <FakeContainer />
     </CardContainer>
   </Layout>
@@ -38,7 +42,7 @@ export default HorseRentalContainer;
 
 const HorseInformation = styled.div`
   height: 100%;
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   background-color: transparent;
@@ -51,7 +55,18 @@ const CardContainer = styled.div`
   display: flex;
   align-items: center;
 `;
+const Row = styled.div`
+  display:flex;
+  height: 100%;
+  width: 60%;
+  flex-direction: column;
+`;
 
 const FakeContainer = styled(HorseInformation)`
   width: 40%;
+`;
+
+const H1 = styled.h1`
+  margin: 50px auto;
+  color: #373737;
 `;

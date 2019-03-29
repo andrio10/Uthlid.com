@@ -16,7 +16,6 @@ import Information from "./Information";
 
 const BlackbarInformation = Data => (
   <Container>
-    {console.log(Data)}
     <Blackbar {...Data} />
     <Information {...Data} />
   </Container>
