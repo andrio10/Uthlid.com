@@ -4,6 +4,7 @@ import styled from "styled-components";
 // Assets 
 import BackgroundImg from "../Assets/MainSite/coverphoto.jpg";
 import Colors from '../Assets/Variables/Colors';
+import ButtonReusable from "./Reusable/Button";
 // Tók myndina í cover.css út því að hún er alltof stór til að vera að refresha í hvert skipti sem að þú prufar eh.
 
 function Bakgrunnur() {
@@ -26,9 +27,9 @@ function Bakgrunnur() {
           </Paragraph>
         </Row>
         <Column> 
-          <Button>
-            Book Now &nbsp; &nbsp; &#x2192;
-          </Button>
+           <ButtonReusable BackgroundColor={Colors.BLACK}  background={true}>
+             Book Now 
+           </ButtonReusable>
         </Column>
       </TextContainer>
     </Container>
@@ -83,12 +84,13 @@ const Column = styled.div`
   background-color: ${props => props.color || "transparent"};
   justify-content: ${props => props.end ? "flex-end":"flex-start"};
   align-items: center;
+  color: ${Colors.GOLD};
 `;
 
 const TitleText = styled.h1`
   font-weight: 800;
   font-size: 90px;
-  color: inherit;
+  color: ${Colors.BLACK};
   letter-spacing: 15px;
   text-transform: uppercase;
 `;

@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import LargeIcons from "./LargeIcons";
 import SmallIcon from "./SmallIcon";
+import Button from '../Reusable/Button';
+import Colors from '../../Assets/Variables/Colors';
 
 const Card = ({ CoverPhoto, Title, BlackbarInfo, SmallIcons, URL }) => (
   <Container>
@@ -11,8 +12,8 @@ const Card = ({ CoverPhoto, Title, BlackbarInfo, SmallIcons, URL }) => (
     <Line />
     <LargeIcons IconArray={BlackbarInfo} />
     <SmallIcon IconArray={SmallIcons} />
-    <Button to={`/cottages/${URL}`}>
-      {`See More `} &nbsp; &nbsp; &#x2192;{" "}
+    <Button toPath={`/cottages/${URL}`} background={true} BackgroundColor={`${Colors.BLACK}`}>
+      {`See More `}
     </Button>
   </Container>
 );
@@ -22,12 +23,14 @@ export default Card;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #F4F4F4!important;
   height: 700px;
   width: 500px;
   overflow: hidden;
   margin: 30px auto;
+  color: ${Colors.GOLD};
+  align-items: center;
 `;
 
 const Image = styled.img`
@@ -51,23 +54,3 @@ const TitleText = styled.h1`
   font-weight: 200;
 `;
 
-const Button = styled(Link)`
-  width: 40%;
-  height: 50px;
-  display: flex;
-  margin: 20px auto;
-  border: 2px solid #C0B283;
-  justify-content: center;
-  align-items: center;
-  color: #C0B283;
-  font-weight: 600;
-  letter-spacing: 0px;
-  font-size: 14px;
-  background-color: #373737;
-  cursor: pointer;
-
-  &:hover {
-    color: #C0B283;
-    text-decoration: none;
-  }
-`;

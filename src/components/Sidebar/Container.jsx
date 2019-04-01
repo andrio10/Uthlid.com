@@ -39,14 +39,14 @@ function Sidebar({ Position }) {
         <Container Position={Position} move={isChecked}>
           <HalfHeight>
             {/* Burger Menu */}
-            <Row>
+            <RowMenu>
               <TextTitle to="/"> Úthlíð </TextTitle>
               <Checkbox myFunc={Show}>
-                <Line1 />
-                <Line2 />
-                <Line3 />
+                <Line1 isChecked={isChecked} />
+                <Line2 isChecked={isChecked} />
+                <Line3 isChecked={isChecked} />
               </Checkbox>
-            </Row>
+            </RowMenu>
             <MainIcons>
               {/* Miðju Icons vinstra meginn */}
               {RowInformation.map(value => {
@@ -142,6 +142,7 @@ const Container = styled.div`
     props.Position === `left` ? `1px solid #c0b283` : null};
 `;
 
+const RowMenu = styled(Row)``;
 const ContainerRight = styled(Container)`
   flex-direction: row;
 `;
@@ -170,17 +171,26 @@ const TextTitle = styled(Link)`
 
 const Line = styled.div`
   display: block;
-  height: 1px;
+  height: 2px;
   width: 60%;
   background-color: #c0b283;
   position: absolute;
 `;
 const Line1 = styled(Line)`
-  top: 23px;
+  top: ${props => (props.isChecked ? "30px" : "23px")};
+  left: ${props => (props.isChecked ? "10px" : "8px")};
+  transition: all 0.4s ease;
+  transform: ${props => (props.isChecked ? "rotateZ(-54deg)" : null)};
 `;
 const Line2 = styled(Line)`
   top: 30px;
+  left: ${props => (props.isChecked ? "80px" : "4px")};
+  opacity: ${props => (props.isChecked ? "00%" : "100%")};
+  transition: all 1s ease;
 `;
 const Line3 = styled(Line)`
-  top: 37px;
+  top: ${props => (props.isChecked ? "30px" : "37px")};
+  transition: all 0.4s ease;
+  transform: ${props => (props.isChecked ? "rotateZ(54deg)" : null)};
+  left: ${props => (props.isChecked ? "10px" : "12px")};
 `;
