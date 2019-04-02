@@ -5,6 +5,7 @@ import CampingIcon from './camping-tent.svg';
 import FacebookIcon from './facebook-logo-button.svg';
 import LocationIcon from './maps-and-flags.svg';
 import InfoIcon from './Info.svg';
+import DinnerIcon from './dinner.svg';
 
 const Icons = {
     HorseRentalIcon,
@@ -13,7 +14,8 @@ const Icons = {
     CampingIcon,
     FacebookIcon,
     LocationIcon,
-    InfoIcon
+    InfoIcon,
+    DinnerIcon
 };
 
 export default Icons;

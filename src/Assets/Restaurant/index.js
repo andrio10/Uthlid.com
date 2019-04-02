@@ -2,16 +2,7 @@ import CoverPhoto from "./img_2546.jpg";
 
 const InformationBoxPrice = `Day Fees`;
 
-const Price = [
-  {
-    Title: `Single`,
-    Price: `3.200`
-  },
-  {
-    Title: `Couples`,
-    Price: `5.000`
-  }
-];
+
 
 const TextInformation = [
   {
@@ -31,8 +22,7 @@ const Info = {
   CoverPhoto,
   TextInformation,
   Includes,
-  InformationBoxPrice,
-  Price
+  InformationBoxPrice
 };
 
 export default Info;
