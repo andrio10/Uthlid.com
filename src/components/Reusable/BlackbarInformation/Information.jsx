@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import NumberSymbol from "./NumberSymbol";
 import ContactInfo from "./contactInfo";
+import Button from '../Button';
+
+import Colors from '../../../Assets/Variables/Colors';
 /*
 
   Information er ljósbrúni kassinn.
@@ -19,25 +22,21 @@ const Information = ({
 }) => (
   <Container>
     <H1>{Title || `Bookings`}</H1>
-    {InformationBoxPrice ? (
-      <Text>{InformationBoxPrice}</Text>
-    ) : (
-      <Text>Pricelist</Text>
-    )}
+    {InformationBoxPrice ? (<Text>{InformationBoxPrice}</Text>) : (<Text>Pricelist</Text>)}
     <NumberSymbol Price={Price} />
-    {horseInformation ? (
-      <AboutText>
-        All trips are great riding tours around the unspoiled and beautiful
-        landscape of Úthlíð.
-      </AboutText>
-    ) : null}
-    {golf ? (
-      <AboutText>
-        Members of the Icelandic Golf Union can book tee times at www.golf.is
-      </AboutText>
-    ) : null}
+    {horseInformation ? (<AboutText> All trips are great riding tours around the unspoiled and beautiful landscape of Úthlíð. </AboutText>) : null}
+    {golf ? (<AboutText>Members of the Icelandic Golf Union can book tee times at www.golf.is</AboutText>) : null}
     <ContactInfo />
-    {horseInformation || golf ? null : <Button>Check Availability</Button>}
+    {horseInformation || golf ? null : (
+      <Button
+        toPath="https://property.godo.is/booking.php?propid=12862"
+        isExternal
+        BackgroundColor={Colors.BLACK}
+        background={true}
+      >
+        Check Availability
+      </Button>
+    )}
   </Container>
 );
 export default Information;
@@ -53,6 +52,10 @@ const Container = styled.div`
   color: #373737;
   z-index: 5;
   align-items: center;
+
+  & > a:hover {
+    color: ${Colors.GOLD};
+  }
 `;
 const H1 = styled.h1`
   font-size: 28px;
@@ -79,20 +82,4 @@ const AboutText = styled.h5`
   padding: 0px;
 `;
 
-const Button = styled.button`
-  background-color: #373737;
-  color: white;
-  height: 60px;
-  font-size: 18px;
-  font-weight: 100;
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  border: none;
-  text-transform: uppercase;
-  margin-bottom: 20px;
 
-  &:hover {
-    cursor: pointer;
-  }
-`;
