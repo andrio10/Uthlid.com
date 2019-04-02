@@ -8,6 +8,7 @@ import Bakgrunnur from '../bakgrunnur';
 import CottagesImage from "../../Assets/Cottages/SVG/img_0021.jpg";
 import GolfImage from "../../Assets/Golf/img_4335.jpg";
 import HorseRentalImage from "../../Assets/HorseRental/k3_9089.jpg";
+import Menu from "../Restaurant/Menu/Menu";
 
 
 
@@ -34,7 +35,7 @@ const RowInformation = [
 
 const LoadingSiteContainer = () => (
   <>
-  <Bakgrunnur />
+  <Bakgrunnur /> 
   <Layout myColor={`transparent`}>
     {/* Ef að röð er slétt tala kemur svartur bakgrunnur, ef að það er oddatala verður hann hvítur. */}
     {RowInformation.map((values, index) => {

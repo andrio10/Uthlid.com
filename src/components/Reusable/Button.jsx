@@ -86,4 +86,9 @@ const Span = styled.span`
     transform: translateX(80px);
     opacity: 0;
   }
+
+  ${ButtonAnchor}:hover & {
+    transform: translateX(80px);
+    opacity: 0;
+  }
 `;

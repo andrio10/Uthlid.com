@@ -16,12 +16,9 @@ const TextInformation = [
   }
 ];
 
-const Includes = [`Pizza`, `Hamburgers`, `Salads`];
-
 const Info = {
   CoverPhoto,
   TextInformation,
-  Includes,
   InformationBoxPrice
 };
 

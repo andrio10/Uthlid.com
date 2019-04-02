@@ -4,7 +4,7 @@ import BlackbarInformation from "../Reusable/BlackbarInformation/BlackbarInforma
 import Header from "../SinglePageCottage/Header";
 import Layout from "../Reusable/Layout";
 import TextContainer from "../SinglePageCottage/TextContainer";
-
+import Menu from "./Menu/Menu";
 // Import Assets
 import Info from "../../Assets/Restaurant/index";
 
@@ -12,6 +12,7 @@ const RestaurantContainer = () => (
   <Layout>
     <Header CoverPhoto={Info.CoverPhoto} />
     <TextContainer {...Info} />
+    <Menu />
   </Layout>
 );
 
