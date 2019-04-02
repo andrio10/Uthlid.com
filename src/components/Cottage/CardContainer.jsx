@@ -7,8 +7,6 @@ import Bakgrunnur from "../bakgrunnur";
 import { CottageInfoArray } from "../../Assets/Cottages/";
 
 const CardContainer = () => (
-  <>
-  <Bakgrunnur />
   <Layout>
     <H1> Cottages </H1>
     <MapCardContainer>
@@ -17,7 +15,6 @@ const CardContainer = () => (
       })}
     </MapCardContainer>
   </Layout>
-  </>
 );
 
 export default CardContainer;

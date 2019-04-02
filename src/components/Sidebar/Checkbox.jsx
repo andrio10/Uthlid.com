@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+
+
 const Checkbox = props => (
   <Container>
     <Label htmlFor="Checked">
@@ -12,7 +14,6 @@ const Checkbox = props => (
       name="Checked"
       onClick={() => props.myFunc()}
     />
-    {console.log(CheckboxInput)}
   </Container>
 );
 
@@ -30,7 +31,7 @@ const Container = styled.div`
   transition: all 1s ease-in;
   z-index: 3;
   padding: 0px;
-
+  overflow: hidden;
   &:hover {
     cursor: pointer;
   }

@@ -1,8 +1,19 @@
-import React from "react";
-import styled from 'styled-components';
+import React, { useEffect } from "react";
+import styled from "styled-components";
 
 // Breidd síðunar svo að hún er jöfn yfir allar undirsíður.
-const Layout = props => <Container myColor = {props.myColor}>{props.children}</Container>;
+// UseEffect setur síðuna efst upp í hvert skipti sem að það keyrir.
+function Layout(props) {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
+  });
+
+  return <Container myColor={props.myColor}>{props.children}</Container>;
+}
 
 export default Layout;
 
@@ -15,5 +26,6 @@ const Container = styled.div`
   width: 75vw;
   padding-bottom: 30px;
   margin: 0px auto;
-  background-color: ${props => props.myColor ? props.myColor : "white!important" };
+  background-color: ${props =>
+  props.myColor ? props.myColor : "white!important"};
 `;

@@ -43,5 +43,5 @@ const Break = styled.div`
   margin: 0px auto;
   height: 2.5px;
   background-color: #c0b283;
-  width: 80%;
+  width: 40%;
 `;
