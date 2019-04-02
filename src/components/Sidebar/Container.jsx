@@ -32,7 +32,7 @@ function Sidebar({ Position }) {
   };
 
   return (
-    <>
+    <Try>
       {Position === `left` ? (
         /* Vinstra SIDEBAR */
         /* Position ræður hvort sidebar fer til vinstri eða hægri */
@@ -91,11 +91,16 @@ function Sidebar({ Position }) {
           <RightSidebar />
         </ContainerRight>
       )}
-    </>
+    </Try>
   );
 }
 
 export default Sidebar;
+
+const Try = styled.div`
+  width: 100%;
+  position: relative;
+`;
 
 const HalfHeight = styled.div`
   height: 100vh;
@@ -125,11 +130,10 @@ const Row = styled.div`
 const Container = styled.div`
   display: flex;
   height: 100vh;
-  width: ${props => (props.Position === `right` ? `28vw` : `12.1vw`)};
+  min-width: ${props => (props.Position === `right` ? `28vw` : `12.1vw`)};
   position: fixed;
   z-index: 500;
-  top: 0;
-  margin-left: ${props => (props.move ? "0px" : "-170px")};
+  margin-left: ${props => (props.move ? "0px" : "-167px")};
   margin-right: ${props => (props.moveRight ? "0px" : "-469px")};
   ${props => props.Position}: 0;
   background-color: #373737;
