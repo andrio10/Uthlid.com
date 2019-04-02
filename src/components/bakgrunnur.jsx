@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-// Assets 
+// Assets
 import BackgroundImg from "../Assets/MainSite/coverphoto.jpg";
-import Colors from '../Assets/Variables/Colors';
+import Colors from "../Assets/Variables/Colors";
 import ButtonReusable from "./Reusable/Button";
 // Tók myndina í cover.css út því að hún er alltof stór til að vera að refresha í hvert skipti sem að þú prufar eh.
 
@@ -17,19 +17,17 @@ function Bakgrunnur() {
         </Column>
         <Row>
           <Paragraph>
-           {
-             `
+            {`
              In unspoiled Icelandic landscape. Centrally in the 
              Golden Circle, close to Geysir, Gullfoss and Thingvellir.  
              One hour from Reykjavík.
-             `
-           } 
+             `}
           </Paragraph>
         </Row>
-        <Column> 
-           <ButtonReusable BackgroundColor={Colors.BLACK}  background={true}>
-             Book Now 
-           </ButtonReusable>
+        <Column>
+          <ButtonReusable toPath="https://property.godo.is/booking.php?propid=12862" isExternal BackgroundColor={Colors.BLACK} background={true}>
+            Book Now
+          </ButtonReusable>
         </Column>
       </TextContainer>
     </Container>
@@ -64,7 +62,6 @@ const TextContainer = styled.div`
   z-index: 2;
   flex-direction: column;
   color: ${Colors.BLACK};
-
 `;
 
 const Row = styled.div`
@@ -82,7 +79,7 @@ const Column = styled.div`
   width: 100%;
   flex-direction: column;
   background-color: ${props => props.color || "transparent"};
-  justify-content: ${props => props.end ? "flex-end":"flex-start"};
+  justify-content: ${props => (props.end ? "flex-end" : "flex-start")};
   align-items: center;
   color: ${Colors.GOLD};
 `;
@@ -112,9 +109,9 @@ const Button = styled.button`
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
-  border: 2px solid ${Colors.GOLD};;
+  border: 2px solid ${Colors.GOLD};
   color: ${Colors.GOLD};
-  transition: .5s all;
+  transition: 0.5s all;
   letter-spacing: -1px;
 
   &:hover,
@@ -123,6 +120,4 @@ const Button = styled.button`
     outline: none;
     cursor: pointer;
   }
-
 `;
-
