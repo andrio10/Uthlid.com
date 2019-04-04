@@ -40,7 +40,7 @@ const RowInformation = [
     Title: `Restaurant`,
     Paragraph: `The restaurant Réttin is open from 16 – 20pm all days of the year except special holidays. We have a reasonable priced simple food and our guests can either sit inside or take-away to their cottages.`,
     Image: `${RestaurantImage}`,
-    Path: `/Camping`
+    Path: `/Restaurant`
   }
 ];
 
