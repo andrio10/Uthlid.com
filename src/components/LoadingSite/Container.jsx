@@ -46,7 +46,7 @@ const RowInformation = [
 
 const LoadingSiteContainer = () => (
   <>
-    <Bakgrunnur />
+  <Bakgrunnur />
     <Layout myColor={`transparent`}>
       {/* Ef að röð er slétt tala kemur svartur bakgrunnur, ef að það er oddatala verður hann hvítur. */}
       {RowInformation.map((values, index) => {

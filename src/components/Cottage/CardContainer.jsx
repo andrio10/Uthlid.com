@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Card from "./card";
 import Layout from "../Reusable/Layout";
-import Bakgrunnur from "../bakgrunnur";
+import Media from '../../Assets/Media/media';
 
 import { CottageInfoArray } from "../../Assets/Cottages/";
 
@@ -22,6 +22,13 @@ export default CardContainer;
 const H1 = styled.h1`
   font-size: 40px;
   margin: 30px auto;
+
+
+  ${Media.phone`
+      margin-top: 100px;
+  
+  `}
+  
 `;
 
 const MapCardContainer = styled.div`

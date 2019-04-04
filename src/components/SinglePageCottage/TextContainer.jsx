@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Add from "../../Assets/Cottages/SVG/add.svg"; // Er að ná í plús Iconið fyrir Includes.
-
+import Media from '../../Assets/Media/media';
 /*
 
   Text Container er lýsing á sumarbústaði. 
@@ -56,12 +56,19 @@ const Textbox = styled.div`
   height: 100%;
   flex-direction: column;
   margin-left: 20px;
+  ${Media.desktop`
+    width: 100%;
+  `};
 `;
 
 const FakeContainer = styled.div`
   display: flex;
   width: 40%;
   height: 100%;
+
+  ${Media.desktop`
+    display: none;
+  `};
 `;
 
 const Text = styled.div`
@@ -71,17 +78,45 @@ const Text = styled.div`
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-`;
-const TextTitle = styled.h3``;
 
-const TextParagraph = styled.p``;
+  ${Media.phone`
+    width: 100%;
+    margin: 0px;
+
+  `};
+`;
+const TextTitle = styled.h3`
+  ${Media.phone`
+        width: 95%;
+        text-align: center;
+    `};
+`;
+
+const TextParagraph = styled.p`
+
+  ${Media.phone`
+        width:95%;
+        font-size: 14px;
+        line-height: 2;
+    `};
+`;
 const TextIncludes = styled.h5`
   display: flex;
   margin: 30px auto;
   font-size: 14px;
   width: 70%;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  ${Media.desktop`
+    width: 70%;
+  `};
+
+  ${Media.phone`
+    font-size: 16px;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px;
+  `};
 `;
 
 const IncludesTextBox = styled.div`

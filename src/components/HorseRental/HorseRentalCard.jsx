@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import Media from '../../Assets/Media/media';
 
 //Hver túr fær sitt eigið card.
 
@@ -30,6 +30,12 @@ const Container = styled.div`
   overflow: hidden;
   z-index: 50;
   margin: 20px;
+
+
+  ${Media.desktop`
+    width: 80%;
+  `}
+
 `;
 const BackgroundOpacity = styled.div`
   position: absolute;
@@ -42,8 +48,13 @@ const BackgroundOpacity = styled.div`
   transition: all 1s ease;
   ${Container}:hover & {
     background-color: rgba(55, 55, 55, 0.8);
-    cursor: pointer;
   }
+
+  
+  
+  ${Media.tablet`
+    background-color: rgba(55, 55, 55, 0.8);
+  `}
 `;
 
 const CardTitle = styled.h4`
@@ -75,4 +86,8 @@ const InformationContainer = styled.div`
   ${Container}:hover & {
     margin-top: 0px;
   }
+
+  ${Media.tablet`
+    margin-top: 0px;
+  `}
 `;

@@ -30,6 +30,7 @@ const EmailText = styled.h3`
   margin: 0px 20px;
   text-transform: none;
   font-weight: ${props => (props.fat ? `900` : `100`)};
+  white-space: nowrap;
 `;
 
 const EmailContainer = styled.div`
@@ -38,4 +39,5 @@ const EmailContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  white-space: nowrap;
 `;

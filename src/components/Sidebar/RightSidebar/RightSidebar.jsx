@@ -4,19 +4,20 @@ import ContactInfo from "./ContactInfo";
 import Map from "./Map";
 import Facebook from "./Facebook";
 import Colors from "../../../Assets/Variables/Colors";
-
+import Media from "../../../Assets/Media/media";
+import MediaHeight from "../../../Assets/Media/mediaHeight";
 const RightSidebar = ({ ShowRightBar }) => (
   <Container ShowRightBar={ShowRightBar}>
-    <Row>
+    <Row smaller>
       <Facebook />
+    </Row>
+    <Break />
+    <Row smaller>
+      <ContactInfo />
     </Row>
     <Break />
     <Row>
       <Map />
-    </Row>
-    <Break />
-    <Row>
-      <ContactInfo />
     </Row>
   </Container>
 );
@@ -34,6 +35,21 @@ const Container = styled.div`
   transition: 0.4s all ease-out;
   right: ${props => (props.ShowRightBar ? `0px` : `-500px`)};
   background-color: ${Colors.BLACK};
+
+  ${Media.tablet`
+    width: 92vw;
+    right: ${props => (props.ShowRightBar ? `0px` : `-90vw`)};
+  `}
+
+  ${Media.phone`
+    height: 90vh;
+    top: ${props => (props.ShowRightBar ?  `calc(-100vh + 136px)` : `0px`)};
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw!important;
+  `}
 `;
 
 const Row = styled.div`
@@ -41,9 +57,21 @@ const Row = styled.div`
   height: 100%;
   position: relative;
   width: 100%;
-  overflow: hidden;
   justify-content: center;
   align-items: center;
+
+  ${Media.tablet`
+    max-height: ${props => (props.smaller ? "20%" : "50%")};
+    overflow: none;
+    margin: 8px auto;
+  `}
+  ${MediaHeight.phone`
+    max-height: ${props => (props.smaller ? "20%" : "50%")};
+  `};
+
+  ${Media.phone`
+    margin: 0px auto;
+    `}
 `;
 
 const Break = styled.div`
@@ -52,4 +80,12 @@ const Break = styled.div`
   height: 2.5px;
   background-color: ${Colors.GOLD};
   width: 40%;
+
+  ${Media.tablet`
+        display: none;
+    `}
+
+  ${MediaHeight.phone`
+    display: none !important;
+  `};
 `;
