@@ -3,6 +3,7 @@ import IconPackage from "./SVG";
 
 const Title = `ONE BEDROOM COTTAGE`;
 const Price = `164`;
+const CoverPhoto_small = IconPackage.oneBedroom_Small;
 const CoverPhoto = IconPackage.oneBedroom;
 const URL = `OneBedroom`;
 
@@ -54,6 +55,7 @@ const Info = {
   Includes,
   SmallIcons,
   URL,
-  InformationBoxPrice
+  InformationBoxPrice,
+  CoverPhoto_small
 };
 export default Info;

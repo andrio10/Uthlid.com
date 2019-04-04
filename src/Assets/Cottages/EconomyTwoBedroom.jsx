@@ -3,6 +3,7 @@ import IconPackage from "./SVG"; // Fæ öll icon og myndir héðan.
 
 const Title = `ECONOMY TWO BEDROOM`;
 const Price = `138`;
+const CoverPhoto_small = IconPackage.economyImage_Small;
 const CoverPhoto = IconPackage.economyImage;
 const URL = `Economy`;
 const InformationBoxPrice = `Prices From`;
@@ -44,6 +45,7 @@ const Info = {
   Includes,
   SmallIcons,
   URL,
-  InformationBoxPrice
+  InformationBoxPrice,
+  CoverPhoto_small
 };
 export default Info;

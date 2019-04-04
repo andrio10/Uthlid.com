@@ -5,11 +5,11 @@ import Card from "./Card";
 import Bakgrunnur from "../bakgrunnur";
 
 // Sækja myndir úr Assets fyrir hverja röð.
-import CottagesImage from "../../Assets/Cottages/SVG/img_0021.jpg";
-import GolfImage from "../../Assets/Golf/img_4335.jpg";
-import HorseRentalImage from "../../Assets/HorseRental/k3_9089.jpg";
-import CampingImage from "../../Assets/Camping/camping.jpg";
-import RestaurantImage from "../../Assets/Restaurant/img_2546.jpg";
+import CottagesImage from "../../Assets/Cottages/SVG/img_0021_middle.jpg";
+import GolfImage from "../../Assets/Golf/img_4335_small.jpg";
+import HorseRentalImage from "../../Assets/HorseRental/k3_9089_small.jpg";
+import CampingImage from "../../Assets/Camping/orginal.jpg";
+import RestaurantImage from "../../Assets/Restaurant/img_2546_small.jpg";
 
 const RowInformation = [
   {

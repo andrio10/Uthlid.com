@@ -6,10 +6,14 @@
 
 */
 
-import economyImage from "./img_0028_wide.jpg";
+import economyImage from "./img_0028.jpg";
+import economyImage_Small from './img_0028_small.jpg';
 import oneBedroom from "./img_0021.jpg";
+import oneBedroom_Small from './img_0021_small.jpg';
 import twoBedroom from "./img_0011n.jpg";
+import twoBedroom_Small from './img_0011n_small.jpg';
 import fourBedroom from "./img_8064.jpg";
+import fourBedroom_Small from "./img_8064_small.jpg";
 import sqIcon from "./m2.svg";
 import personIcon from "./persons.svg";
 import bedIcon from "./bed.svg";
@@ -25,11 +29,17 @@ import disksBlack from "./disksBlack.svg";
 import m2Black from "./m2Black.svg";
 import personsBlack from "./personsBlack.svg";
 
+
+
 const IconPackage = {
   economyImage,
+  economyImage_Small,
   oneBedroom,
+  oneBedroom_Small,
   twoBedroom,
+  twoBedroom_Small,
   fourBedroom,
+  fourBedroom_Small,
   sqIcon,
   personIcon,
   bedIcon,
