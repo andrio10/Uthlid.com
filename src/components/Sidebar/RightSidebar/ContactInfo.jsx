@@ -25,5 +25,6 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     color: #c0b283;
-    background-color: #373737;
+
+    background-color: inherit;
 `;

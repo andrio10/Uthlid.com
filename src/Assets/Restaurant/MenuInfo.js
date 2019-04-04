@@ -38,7 +38,11 @@ const Hamburgers = [
     Ingred: `Veggieburger, lettuce, tomatoes, cucumber, onion, cheese`,
     Price: `2.000 ISK`
   },
-  { Title: `Extras`, Ingred: `Bacon, egg, mushooms, blue cheese, jalapeno` }
+  {
+    Title: `Extras`,
+    Ingred: `Bacon, egg, mushooms, blue cheese, jalapeno`,
+    Price: `200 ISK`
+  }
 ];
 
 const Sandwiches = [
@@ -87,5 +91,4 @@ const Other = [
   }
 ];
 
-export default {Pizza, Hamburgers, Sandwiches, Salads, Other};
-
+export default { Pizza, Hamburgers, Sandwiches, Salads, Other };
