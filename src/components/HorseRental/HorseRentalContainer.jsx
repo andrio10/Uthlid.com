@@ -7,6 +7,7 @@ import Layout from "../Reusable/Layout";
 import HorseRentInformation from "../../Assets/HorseRental"; /* Hérna fáum við upplýsingarnar um hverja ferð. 
                                                               Þurfum ekki að gera /index.js því að javascript leitar að henni automatískt. */
 import HorseBackground from "../../Assets/HorseRental/k3_9089.jpg";
+import Colors from "../../Assets/Variables/Colors";
 
 /*
   Horse Rental Container sýnir þær ferðir sem að boðið er upp á.
@@ -68,5 +69,5 @@ const FakeContainer = styled(HorseInformation)`
 
 const H1 = styled.h1`
   margin: 50px auto;
-  color: #373737;
+  color: ${Colors.BLACK};
 `;

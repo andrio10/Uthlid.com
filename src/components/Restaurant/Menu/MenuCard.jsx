@@ -22,7 +22,7 @@ export default MenuCard;
 
 const Container = styled.div`
   display: flex;
-  min-height: 40px;
+  min-height: 50px;
   width: 100%;
   margin-bottom: 10px;
   background-color: ${Colors.BLACK};

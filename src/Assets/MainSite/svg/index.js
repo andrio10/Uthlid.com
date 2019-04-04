@@ -6,7 +6,7 @@ import FacebookIcon from './facebook-logo-button.svg';
 import LocationIcon from './maps-and-flags.svg';
 import InfoIcon from './Info.svg';
 import DinnerIcon from './dinner.svg';
-
+import LeftIcon from './left-arrow.svg';
 const Icons = {
     HorseRentalIcon,
     CottagesIcon,
@@ -15,7 +15,8 @@ const Icons = {
     FacebookIcon,
     LocationIcon,
     InfoIcon,
-    DinnerIcon
+    DinnerIcon,
+    LeftIcon
 };
 
 export default Icons;

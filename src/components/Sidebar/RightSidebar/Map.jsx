@@ -19,6 +19,7 @@ const Maps = () => (
 export default Maps;
 
 const Try = styled(LeafletMap)`
+  background-color: inherit;
   width: 320px;
   height: 80%;
   overflow: hidden;

@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-const Boxes = ({ Icon, Path, Tooltip, myFunc, truers }) => (
+import Colors from '../../Assets/Variables/Colors';
+const Boxes = ({ Icon, Path, noBorder, myFunc, truers }) => (
   <>
     {Path ? (
       <Container>
-        <Clickable to={`${Path}`} title={`${Tooltip}`}>
-          <SingleIcon src={Icon} />
+        <Clickable to={`${Path}`}>
+          <SingleIcon  src={Icon} />
         </Clickable>
       </Container>
     ) : (
-      <Container onClick={() => myFunc()} title={`${Tooltip}`} expand={truers}>
+      <Container onClick={() => myFunc()} expand={truers}>
         <SingleIcon src={Icon}  />
       </Container>
     )}
@@ -24,26 +25,28 @@ const Container = styled.button`
   min-height: 60px;
   width: 60px;
   margin: 4px 4px;
-
-  background-color: transparent;
+  background-color: ${Colors.BLACK};
   position: relative;
   justify-content: center;
+  align-items: center;
   transition: all 0.4s cubic-bezier(.23,.56,.54,1.01);
-  z-index: 3;
+  z-index: 5;
   padding: 0px;
   margin: ${props => props.expand ? "130px 4px" : "4px 4px"};
-  border: ${props => props.expand ? "0px solid #c0b283" : "2px solid #c0b283"};
   border-left: 2px solid #c0b283;
+  border: 2px solid transparent;
 
 
-  &:hover,
-  &:focus,
-  &:active {
+  &:hover {
     cursor: pointer;
     outline: none;
     background-color: #c0b283;
     border: 2px solid #373737;
-      }
+    }
+  &:focus,
+  &:active {
+    outline: none;
+  }
 `;
 
 const Clickable = styled(Link)`
@@ -62,12 +65,6 @@ const SingleIcon = styled.img`
   background-size: cover;
   
   ${Container}:hover &{
-    filter: invert(50%) sepia(0%) saturate(80%) hue-rotate(143deg) brightness(20%) contrast(71%);
-  }
-  ${Container}:active &{
-    filter: invert(50%) sepia(0%) saturate(80%) hue-rotate(143deg) brightness(20%) contrast(71%);
-  }
-  ${Container}:focus &{
     filter: invert(50%) sepia(0%) saturate(80%) hue-rotate(143deg) brightness(20%) contrast(71%);
   }
 `;

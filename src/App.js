@@ -27,7 +27,7 @@ const GlobalStyles = createGlobalStyle`
 `;
 function mapStyles(styles) {
   return {
-    opacity: styles.opacity,
+    opacity: styles.opacity
   };
 }
 class App extends Component {
@@ -39,9 +39,9 @@ class App extends Component {
         <Sidebar Position={`right`} />
 
         <Animate
-          atEnter={{opacity: 0}}
-          atLeave={{opacity: 0}}
-          atActive={{opacity: 1 }}
+          atEnter={{ opacity: 0 }}
+          atLeave={{ opacity: 0 }}
+          atActive={{ opacity: 1 }}
           mapStyles={mapStyles}
         >
           {/* Nauðsynlegt að hafa path=/ neðst, annars fer React-Router alltaf á fyrstu heimasíðuna */}
@@ -76,9 +76,8 @@ const Animate = styled(AnimatedSwitch)`
   & > div {
     position: absolute;
     margin-left: auto;
-margin-right: auto;
-left: 0;
-right: 0;
+    margin-right: auto;
+    left: 0;
+    right: 0;
   }
-
 `;
