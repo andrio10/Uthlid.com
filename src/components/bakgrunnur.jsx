@@ -5,6 +5,7 @@ import styled from "styled-components";
 import BackgroundImg from "../Assets/MainSite/coverphoto.jpg";
 import Colors from "../Assets/Variables/Colors";
 import ButtonReusable from "./Reusable/Button";
+import Media from "../Assets/Media/media";
 // Tók myndina í cover.css út því að hún er alltof stór til að vera að refresha í hvert skipti sem að þú prufar eh.
 
 function Bakgrunnur() {
@@ -25,7 +26,12 @@ function Bakgrunnur() {
           </Paragraph>
         </Row>
         <Column>
-          <ButtonReusable toPath="https://property.godo.is/booking.php?propid=12862" isExternal BackgroundColor={Colors.BLACK} background={true}>
+          <ButtonReusable
+            toPath="https://property.godo.is/booking.php?propid=12862"
+            isExternal
+            BackgroundColor={Colors.BLACK}
+            background={true}
+          >
             Book Now
           </ButtonReusable>
         </Column>
@@ -90,6 +96,7 @@ const TitleText = styled.h1`
   color: ${Colors.BLACK};
   letter-spacing: 15px;
   text-transform: uppercase;
+  ${Media.phone`font-size: 40px;`}
 `;
 const Paragraph = styled.h4`
   width: 35%;
@@ -97,6 +104,9 @@ const Paragraph = styled.h4`
   font-weight: 800;
   line-height: 2;
   white-space: pre;
+  ${Media.phone`
+    font-size: 15px
+  `}
 `;
 
 const Button = styled.button`

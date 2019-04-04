@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import {Link} from 'react-router-dom';
-import Button from '../Reusable/Button';
+import { Link } from "react-router-dom";
+import Button from "../Reusable/Button";
 import Colors from "../../Assets/Variables/Colors";
 const Card = ({ Backgroundcolor, Title, Paragraph, Image, Path }) => (
   <Container background={Backgroundcolor}>
     <TextSide background={Backgroundcolor}>
       <TitleText>{Title}</TitleText>
       <Description>{Paragraph}</Description>
-      <Button background={Backgroundcolor} toPath={`${Path}`}>Read More </Button>
+      <Button background={Backgroundcolor} toPath={`${Path}`}>
+        Read More{" "}
+      </Button>
     </TextSide>
     <ImageSide src={Image} />
   </Container>
@@ -47,4 +49,3 @@ const Description = styled.p`
   line-height: 2;
   width: 50%;
 `;
-
