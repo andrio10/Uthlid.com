@@ -25,6 +25,8 @@ const Container = styled.div`
   border-radius: 15px;
   background-image: url(${props => props.CardImage});
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #c0b283;
   position: relative;
   overflow: hidden;

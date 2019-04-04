@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 // Assets
 import BackgroundImg from "../Assets/MainSite/coverphoto.jpg";
+import BackgroundImg_smaller from "../Assets/MainSite/coverphoto_smaller.jpg";
+import BackgroundImg_small from "../Assets/MainSite/coverphoto_small.jpg";
 import Colors from "../Assets/Variables/Colors";
 import ButtonReusable from "./Reusable/Button";
 import Media from "../Assets/Media/media";
@@ -11,7 +13,7 @@ import Media from "../Assets/Media/media";
 function Bakgrunnur() {
   return (
     <Container>
-      <BackgroundImage src={BackgroundImg} />
+      <BackgroundImage/>
       <TextContainer>
         <Column end>
           <TitleText> Úthlíð </TitleText>
@@ -52,14 +54,29 @@ const Container = styled.div`
 
 `;
 
-const BackgroundImage = styled.img`
+const BackgroundImage = styled.div`
   height: 100%;
   width: 100%;
   position: absolute;
+  background-image: url(${BackgroundImg});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
   z-index: 1;
   top: 0;
   filter: opacity(55%);
   left: 0;
+
+
+  ${Media.large`
+  background-image: url(${BackgroundImg_small});
+  `}
+
+  ${Media.phone`
+  background-image: url(${BackgroundImg_smaller});
+  `}
+
+
 `;
 
 const TextContainer = styled.div`

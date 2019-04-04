@@ -7,9 +7,9 @@ import Colors from '../../Assets/Variables/Colors';
 
 import Media from '../../Assets/Media/media';
 
-const Card = ({ CoverPhoto, Title, BlackbarInfo, SmallIcons, URL }) => (
+const Card = ({ CoverPhoto_small, Title, BlackbarInfo, SmallIcons, URL }) => (
   <Container>
-    <Image src={CoverPhoto} />
+    <Image src={CoverPhoto_small} />
     <TitleText>{Title}</TitleText>
     <Line />
     <LargeIcons IconArray={BlackbarInfo} />
