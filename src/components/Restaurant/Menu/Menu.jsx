@@ -6,6 +6,7 @@ import Layout from "../../Reusable/Layout";
 // Assets
 import MenuInfo from "../../../Assets/Restaurant/MenuInfo";
 import Colors from "../../../Assets/Variables/Colors";
+import Media from '../../../Assets/Media/media';
 
 const keys = Object.entries(MenuInfo);
 function Menu() {
@@ -35,6 +36,10 @@ const Container = styled.div`
   flex-direction: column;
   width: 80%;
   height: 100%;
+
+  ${Media.phone`
+  width: 90%;
+  `}
 `;
 
 const FoodType = styled.div`

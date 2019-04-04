@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-
+import Media from "../../Assets/Media/media";
 const LargeIcons = ({ IconArray }) => (
   <Container>
     {IconArray.map(values => {
-      {console.log(values)}
+      {
+        console.log(values);
+      }
       return (
         <IconRow>
           <Icon src={values.IconBlack} />
@@ -24,6 +26,11 @@ const Container = styled.div`
   align-items: flex-start;
   width: 100%;
   margin: 0px auto;
+
+  ${Media.phone`
+    flex-direction: column;
+    flex-wrap: nowrap;
+  `}
 `;
 
 const IconRow = styled.div`
@@ -37,7 +44,17 @@ const IconRow = styled.div`
 
   &:nth-child(odd) {
     flex-direction: row-reverse;
+
+    ${Media.phone`
+    flex-direction: row;
+    `}
   }
+
+  ${Media.phone`
+    width: 60%;
+    justify-content: space-between;
+    margin: 1px auto;
+  `}
 `;
 
 const Icon = styled.img`
@@ -52,4 +69,8 @@ const IconText = styled.h5`
   color: #373737;
   font-weight: 200;
   font-size: 30px;
+
+  ${Media.phone`
+  margin: 0px;
+    `}
 `;

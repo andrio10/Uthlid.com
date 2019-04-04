@@ -3,7 +3,7 @@ import styled from "styled-components";
 import NumberSymbol from "./NumberSymbol";
 import ContactInfo from "./contactInfo";
 import Button from '../Button';
-
+import Media from '../../../Assets/Media/media';
 import Colors from '../../../Assets/Variables/Colors';
 /*
 
@@ -49,9 +49,22 @@ const Container = styled.div`
   flex-direction: column;
   margin-top: 100px;
   justify-content: space-around;
-  color: #373737;
+  color: ${Colors.BLACK};
   z-index: 5;
   align-items: center;
+  border: 2px solid ${Colors.BLACK};
+
+  ${Media.desktop`
+      margin-top: -400px;
+      width: 300px;
+      height: 400px;
+      align-self: flex-end;
+  `};
+  
+  ${Media.phone`
+      margin-top: -200px;
+      align-self: center;
+  `};
 
   & > a:hover {
     color: ${Colors.GOLD};

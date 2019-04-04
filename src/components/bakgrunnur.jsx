@@ -49,6 +49,7 @@ const Container = styled.div`
   position: relative;
   justify-content: center;
   align-items: center;
+
 `;
 
 const BackgroundImage = styled.img`
@@ -68,6 +69,8 @@ const TextContainer = styled.div`
   z-index: 2;
   flex-direction: column;
   color: ${Colors.BLACK};
+
+
 `;
 
 const Row = styled.div`
@@ -96,17 +99,21 @@ const TitleText = styled.h1`
   color: ${Colors.BLACK};
   letter-spacing: 15px;
   text-transform: uppercase;
-  ${Media.phone`font-size: 40px;`}
+  ${Media.desktop`font-size: 40px;`}
 `;
 const Paragraph = styled.h4`
-  width: 35%;
   color: inherit;
   font-weight: 800;
   line-height: 2;
   white-space: pre;
-  ${Media.phone`
-    font-size: 15px
+
+  ${Media.large`
+    width: 90%;
+    font-size: 18px;
   `}
+  ${Media.tablet`
+  font-size: 15px;
+  white-space: normal;`}
 `;
 
 const Button = styled.button`

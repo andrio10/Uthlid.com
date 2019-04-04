@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
+import Media from '../../Assets/Media/media';
+import MediaHeight from '../../Assets/Media/mediaHeight';
+
 import Colors from '../../Assets/Variables/Colors';
 const Boxes = ({ Icon, Path, noBorder, myFunc, truers }) => (
   <>
@@ -24,7 +28,7 @@ const Container = styled.button`
   display: flex;
   min-height: 60px;
   width: 60px;
-  margin: 4px 4px;
+  margin: 4px;
   background-color: ${Colors.BLACK};
   position: relative;
   justify-content: center;
@@ -32,10 +36,19 @@ const Container = styled.button`
   transition: all 0.4s cubic-bezier(.23,.56,.54,1.01);
   z-index: 5;
   padding: 0px;
-  margin: ${props => props.expand ? "130px 4px" : "4px 4px"};
+  margin: ${props => props.expand ? "130px 4px" : "4px"};
   border-left: 2px solid #c0b283;
   border: 2px solid transparent;
 
+  ${Media.tablet`
+    margin: 0px auto;
+    max-height: 50px;
+    width: 50px;
+  `}
+
+  ${MediaHeight.phone`
+    margin: 0px auto;
+  `};
 
   &:hover {
     cursor: pointer;

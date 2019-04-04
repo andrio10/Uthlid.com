@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Boxes from "./boxes";
 import RightSidebar from "./RightSidebar/RightSidebar";
+import Media from "../../Assets/Media/media";
+import MediaHeight from "../../Assets/Media/mediaHeight";
 // Assets
 import Icons from "../../Assets/MainSite/svg";
 import Colors from "../../Assets/Variables/Colors";
@@ -33,9 +35,7 @@ function Sidebar({ Position }) {
         /* Position ræður hvort sidebar fer til vinstri eða hægri */
         <Container Position={Position}>
           <HalfHeight>
-            <Row>
-              <Boxes Path="/" Icon={Icons.LeftIcon} />
-            </Row>
+            <Boxes Path="/" Icon={Icons.LeftIcon} />
             <MainIcons>
               {/* Miðju Icons vinstra meginn */}
               {RowInformation.map(value => {
@@ -63,14 +63,14 @@ function Sidebar({ Position }) {
             <Boxes
               truers={ShowRightBar}
               myFunc={ShowMyRightMenuBar}
-              Icon={Icons.LocationIcon}
-              Tooltip={`Location`}
+              Icon={Icons.InfoIcon}
+              Tooltip={`Contact Info`}
             />
             <Boxes
               truers={ShowRightBar}
               myFunc={ShowMyRightMenuBar}
-              Icon={Icons.InfoIcon}
-              Tooltip={`Contact Info`}
+              Icon={Icons.LocationIcon}
+              Tooltip={`Location`}
             />
           </HalfHeight>
           <RightSidebar ShowRightBar={ShowRightBar} />
@@ -88,7 +88,7 @@ const Try = styled.div`
 `;
 
 const HalfHeight = styled.div`
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: ${props => (props.center ? "center" : "space-between")};
@@ -97,6 +97,16 @@ const HalfHeight = styled.div`
   z-index: 4;
   position: relative;
   background-color: ${Colors.BLACK};
+
+  ${Media.tablet`
+    align-items: center;
+  `}
+
+  ${Media.phone`
+    flex-direction: row;
+    margin: 0px;
+    width: 100%;
+  `}
 `;
 
 const MainIcons = styled.div`
@@ -106,14 +116,37 @@ const MainIcons = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  background-color: ${Colors.BLACK};
+
+  ${MediaHeight.phone`
+    justify-content: ${`flex-start`};
+  `}
+
+  ${Media.tablet`
+    margin: 0px;
+    align-items: center;
+
+  `}
+
+
+
+  ${Media.phone`
+    flex-direction: row;
+    justify-content: space-between;
+  `}
 `;
 
 const Row = styled.div`
   display: flex;
-  min-width: 100%;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   position: relative;
+
+
+  ${Media.phone`
+    width: 100%;
+  `}
 `;
 
 const Container = styled.div`
@@ -127,10 +160,19 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   transition: all 0.4s cubic-bezier(0.23, 0.56, 0.54, 1.01);
+
+  ${Media.phone`
+    max-height: 68px;
+    width: 100vw;
+    flex-direction: row;
+  `}
 `;
 
 const ContainerRight = styled(Container)`
   flex-direction: row;
+  ${Media.phone`
+    bottom: 0;
+  `}
 `;
 
 const TextTitle = styled(Link)`
@@ -154,7 +196,9 @@ const TextTitle = styled(Link)`
   z-index: -10000;
   transition: 0.4s all ease-out;
   opacity: 0;
-
+  ${Media.tablet`
+    display: none;
+  `}
   &:hover {
     outline: none;
     color: ${Colors.BLACK};

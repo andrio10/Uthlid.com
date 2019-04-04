@@ -5,6 +5,8 @@ import SmallIcon from "./SmallIcon";
 import Button from '../Reusable/Button';
 import Colors from '../../Assets/Variables/Colors';
 
+import Media from '../../Assets/Media/media';
+
 const Card = ({ CoverPhoto, Title, BlackbarInfo, SmallIcons, URL }) => (
   <Container>
     <Image src={CoverPhoto} />
@@ -23,7 +25,7 @@ export default Card;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: #F4F4F4!important;
   height: 700px;
   width: 500px;
@@ -31,6 +33,16 @@ const Container = styled.div`
   margin: 30px auto;
   color: ${Colors.GOLD};
   align-items: center;
+  padding-bottom: 10px;
+
+  ${Media.tablet`
+    width:400px;  
+  `}
+
+  ${Media.phone`
+    width: 300px;  
+  `}
+  
 `;
 
 const Image = styled.img`
@@ -52,5 +64,13 @@ const TitleText = styled.h1`
   padding: 0px;
   color: #373737;
   font-weight: 200;
+
+  ${Media.tablet`
+    font-size: 25px;  
+  `}
+
+  ${Media.phone`
+    font-size: 20px;  
+  `}
 `;
 

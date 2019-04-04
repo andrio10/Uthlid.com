@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import FacebookPage from './FacebookPage';
+import Media from '../../../Assets/Media/media';
+
 const Facebook = () => (
     <Container>
-        <h1> Find us on Facebook </h1>
+        <a href="https://www.facebook.com/Uthlid-Iceland-Cottages-312270718970655/"> Find us on Facebook </a>
         <FacebookPage />
     </Container>
 );
@@ -18,7 +20,10 @@ const Container = styled.div`
     width: 100%;
     flex-direction: column;
     background-color: inherit;
-    & > h1 {
+    & > a {
         color: #c0b283;
+        ${Media.tablet`
+        font-size: 17px;
+    `}
     }
 `;

@@ -8,7 +8,7 @@ import HorseRentInformation from "../../Assets/HorseRental"; /* Hérna fáum vi�
                                                               Þurfum ekki að gera /index.js því að javascript leitar að henni automatískt. */
 import HorseBackground from "../../Assets/HorseRental/k3_9089.jpg";
 import Colors from "../../Assets/Variables/Colors";
-
+import Media from '../../Assets/Media/media';
 /*
   Horse Rental Container sýnir þær ferðir sem að boðið er upp á.
  */
@@ -25,13 +25,13 @@ const HorseRentalContainer = () => (
     <BlackbarInformation horseInformation={true} Price={Price} />
     <CardContainer>
       <Row>
-      <H1> Trips </H1>
-      <HorseInformation>
-        {/* Fyrir hverja ferð búum við til HorseRentalCard sem er með upplýsingum um hvern túr. */}
-        {HorseRentInformation.map(values => {
-          return <HorseRentalCard {...values} />;
-        })}
-      </HorseInformation>
+        <H1> Trips </H1>
+        <HorseInformation>
+          {/* Fyrir hverja ferð búum við til HorseRentalCard sem er með upplýsingum um hvern túr. */}
+          {HorseRentInformation.map(values => {
+            return <HorseRentalCard {...values} />;
+          })}
+        </HorseInformation>
       </Row>
 
       <FakeContainer />
@@ -61,13 +61,22 @@ const Row = styled.div`
   height: 100%;
   width: 60%;
   flex-direction: column;
+
+  ${Media.desktop`
+    width: 100vw;
+  `};
 `;
 
 const FakeContainer = styled(HorseInformation)`
   width: 40%;
+
+  ${Media.desktop`
+    display: none;
+  `};
 `;
 
 const H1 = styled.h1`
+
   margin: 50px auto;
   color: ${Colors.BLACK};
 `;

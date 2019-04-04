@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-
+import Media from "../../../Assets/Media/media";
+import MediaHeight from "../../../Assets/Media/mediaHeight";
 const FacebookPage = () => (
   <Container
     className="fb-page"
@@ -24,4 +25,11 @@ const Container = styled.div`
   width: 320px;
   height: 200px;
   z-index: 501;
+
+  ${Media.tablet`
+    display: none !important;`};
+
+  ${MediaHeight.phone`
+    display: none !important;
+  `};
 `;

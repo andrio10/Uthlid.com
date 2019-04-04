@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import Media from '../../../Assets/Media/media';
 /*
 
   Fáum Info frá BlackbarInformation í gegnum props. Í Info eru Iconin og tölurnar sem að við þurfum að sýna fyrir sumarbústaðina.
@@ -29,6 +29,11 @@ const Container = styled.div`
   width: 100%;
   background-color: ${props => props.horseInformation ? "transparent" : "#373737"};
   justify-content: space-evenly;
+
+
+  ${Media.phone`
+    display: none;
+  `};
 `;
 
 const Row = styled.div`

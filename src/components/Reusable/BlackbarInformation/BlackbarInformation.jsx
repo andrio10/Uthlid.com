@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Blackbar from "./Blackbar";
 import Information from "./Information";
-
+import Media from '../../../Assets/Media/media';
 /*
 
     Þetta er undir Reusable því að við ætlum að nota þetta líka fyrir golfið, í stað þess að copy/paste'a þetta 
@@ -29,4 +29,18 @@ const Container = styled.div`
   margin: 0px auto;
   height: 1px;
   align-items: center;
+
+
+  ${Media.large`
+    width: 100%;
+  `};
+
+  ${Media.desktop`
+  height: 100%;
+  flex-direction: column-reverse;
+  `};
+
+
+
+
 `;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Map as LeafletMap, TileLayer, Marker, Popup } from "react-leaflet";
 import styled from "styled-components";
-
+import Media from '../../../Assets/Media/media';
 const position = [64.279573, -20.444255];
 const Maps = () => (
   <Try center={position} zoom={13}>
@@ -23,4 +23,10 @@ const Try = styled(LeafletMap)`
   width: 320px;
   height: 80%;
   overflow: hidden;
+  
+
+  
+  ${Media.tablet`
+    height: 90%;
+  `}
 `;
