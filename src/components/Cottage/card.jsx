@@ -40,7 +40,7 @@ const Container = styled.div`
   `}
 
   ${Media.phone`
-    width: 300px;  
+    width: 95%;  
   `}
   
 `;
