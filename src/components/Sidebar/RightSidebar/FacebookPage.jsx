@@ -6,13 +6,21 @@ import { Media, MediaHeight } from "../../../Assets/Variables/";
 
 const FacebookPage = () => (
   <Container
-    className="fb-page"
+    class="fb-page"
     data-href="https://www.facebook.com/Uthlid-Iceland-Cottages-312270718970655/"
+    data-small-header="false"
+    data-adapt-container-width="true"
+    data-hide-cover="false"
+    data-show-facepile="false"
   >
     <blockquote
       cite="https://www.facebook.com/Uthlid-Iceland-Cottages-312270718970655/"
-      className="fb-xfbml-parse-ignore"
-    />
+      class="fb-xfbml-parse-ignore"
+    >
+      <a href="https://www.facebook.com/Uthlid-Iceland-Cottages-312270718970655/">
+        Uthlid Iceland Cottages
+      </a>
+    </blockquote>
   </Container>
 );
 
