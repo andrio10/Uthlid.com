@@ -1,19 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
+// Components
+import { Button } from "../Reusable/";
+
 // Assets
-import BackgroundImg from "../Assets/MainSite/coverphoto.jpg";
-import BackgroundImg_smaller from "../Assets/MainSite/coverphoto_smaller.jpg";
-import BackgroundImg_small from "../Assets/MainSite/coverphoto_small.jpg";
-import Colors from "../Assets/Variables/Colors";
-import ButtonReusable from "./Reusable/Button";
-import Media from "../Assets/Media/media";
+import { Regular, Small, Smaller } from "../../Assets/MainSite/";
+import { Colors, Media } from "../../Assets/Variables/";
 // Tók myndina í cover.css út því að hún er alltof stór til að vera að refresha í hvert skipti sem að þú prufar eh.
 
 function Bakgrunnur() {
   return (
     <Container>
-      <BackgroundImage/>
+      <BackgroundImage />
       <TextContainer>
         <Column end>
           <TitleText> Úthlíð </TitleText>
@@ -28,14 +27,14 @@ function Bakgrunnur() {
           </Paragraph>
         </Row>
         <Column>
-          <ButtonReusable
+          <Button
             toPath="https://property.godo.is/booking.php?propid=12862"
             isExternal
             BackgroundColor={Colors.BLACK}
             background={true}
           >
             Book Now
-          </ButtonReusable>
+          </Button>
         </Column>
       </TextContainer>
     </Container>
@@ -51,14 +50,13 @@ const Container = styled.div`
   position: relative;
   justify-content: center;
   align-items: center;
-
 `;
 
 const BackgroundImage = styled.div`
   height: 100%;
   width: 100%;
   position: absolute;
-  background-image: url(${BackgroundImg});
+  background-image: url(${Regular});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -67,16 +65,8 @@ const BackgroundImage = styled.div`
   filter: opacity(55%);
   left: 0;
 
-
-  ${Media.large`
-  background-image: url(${BackgroundImg_small});
-  `}
-
-  ${Media.phone`
-  background-image: url(${BackgroundImg_smaller});
-  `}
-
-
+  ${Media.large`background-image: url(${Small});`}
+  ${Media.phone`background-image: url(${Smaller});`}
 `;
 
 const TextContainer = styled.div`
@@ -86,8 +76,6 @@ const TextContainer = styled.div`
   z-index: 2;
   flex-direction: column;
   color: ${Colors.BLACK};
-
-
 `;
 
 const Row = styled.div`
@@ -129,29 +117,6 @@ const Paragraph = styled.h4`
     font-size: 18px;
   `}
   ${Media.tablet`
-  font-size: 15px;
-  white-space: normal;`}
-`;
-
-const Button = styled.button`
-  display: flex;
-  width: 200px;
-  height: 50px;
-  border: none;
-  justify-content: center;
-  background-color: ${Colors.BLACK};
-  font-size: 16px;
-  font-weight: 400;
-  text-transform: uppercase;
-  border: 2px solid ${Colors.GOLD};
-  color: ${Colors.GOLD};
-  transition: 0.5s all;
-  letter-spacing: -1px;
-
-  &:hover,
-  &:active,
-  &:focus {
-    outline: none;
-    cursor: pointer;
-  }
+    font-size: 15px;
+    white-space: normal;`}
 `;

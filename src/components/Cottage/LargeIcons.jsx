@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import Media from "../../Assets/Media/media";
+
+// Assets
+import {Colors, Media} from "../../Assets/Variables/";
+
 const LargeIcons = ({ IconArray }) => (
   <Container>
     {IconArray.map(values => {
-      {
-        console.log(values);
-      }
       return (
         <IconRow>
           <Icon src={values.IconBlack} />
@@ -44,10 +44,7 @@ const IconRow = styled.div`
 
   &:nth-child(odd) {
     flex-direction: row-reverse;
-
-    ${Media.phone`
-    flex-direction: row;
-    `}
+    ${Media.phone`flex-direction: row;`}
   }
 
   ${Media.phone`
@@ -66,11 +63,8 @@ const Icon = styled.img`
 const IconText = styled.h5`
   margin: 0px 20px;
   padding: 0px;
-  color: #373737;
+  color: ${Colors.BLACK};
   font-weight: 200;
   font-size: 30px;
-
-  ${Media.phone`
-  margin: 0px;
-    `}
+  ${Media.phone`margin: 0px;`}
 `;

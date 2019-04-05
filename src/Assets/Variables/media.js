@@ -8,7 +8,7 @@ const sizes = {
 };
 
 // Iterate through the sizes and create a media template
-const media = Object.keys(sizes).reduce((acc, label) => {
+const Media = Object.keys(sizes).reduce((acc, label) => {
   acc[label] = (...args) => css`
     @media (max-width: ${sizes[label] / 16}em) {
       ${css(...args)}
@@ -17,5 +17,4 @@ const media = Object.keys(sizes).reduce((acc, label) => {
   return acc;
 }, {});
 
-
-export default media;
+export default Media;

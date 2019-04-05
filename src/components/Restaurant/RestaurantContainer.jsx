@@ -1,10 +1,9 @@
 import React from "react";
-import styled from "styled-components";
-import BlackbarInformation from "../Reusable/BlackbarInformation/BlackbarInformation";
-import Header from "../SinglePageCottage/Header";
-import Layout from "../Reusable/Layout";
-import TextContainer from "../SinglePageCottage/TextContainer";
+
+// Components
+import {Header, Layout, TextContainer} from "../Reusable/";
 import Menu from "./Menu/Menu";
+
 // Import Assets
 import Info from "../../Assets/Restaurant/index";
 

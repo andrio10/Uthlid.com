@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Media from "../../../Assets/Media/media";
-import MediaHeight from "../../../Assets/Media/mediaHeight";
+
+// Assets
+import { Media, MediaHeight } from "../../../Assets/Variables/";
+
 const FacebookPage = () => (
   <Container
     className="fb-page"
@@ -9,12 +11,8 @@ const FacebookPage = () => (
   >
     <blockquote
       cite="https://www.facebook.com/Uthlid-Iceland-Cottages-312270718970655/"
-      class="fb-xfbml-parse-ignore"
-    >
-      <a href="https://www.facebook.com/Uthlid-Iceland-Cottages-312270718970655/">
-        Uthlid Iceland Cottages
-      </a>
-    </blockquote>
+      className="fb-xfbml-parse-ignore"
+    />
   </Container>
 );
 
@@ -25,11 +23,6 @@ const Container = styled.div`
   width: 320px;
   height: 200px;
   z-index: 501;
-
-  ${Media.tablet`
-    display: none !important;`};
-
-  ${MediaHeight.phone`
-    display: none !important;
-  `};
+  ${Media.tablet`display: none !important;`};
+  ${MediaHeight.phone`display: none !important;`};
 `;

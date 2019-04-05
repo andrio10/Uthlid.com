@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Media from '../../Assets/Media/media';
+
+// Assets
+import { Media, Colors } from "../../Assets/Variables/";
 
 //Hver túr fær sitt eigið card.
 
@@ -27,18 +29,14 @@ const Container = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #c0b283;
+  color: ${Colors.GOLD};
   position: relative;
   overflow: hidden;
   z-index: 50;
   margin: 20px;
-
-
-  ${Media.desktop`
-    width: 80%;
-  `}
-
+  ${Media.desktop`width: 80%;`}
 `;
+
 const BackgroundOpacity = styled.div`
   position: absolute;
   height: 100%;
@@ -51,12 +49,7 @@ const BackgroundOpacity = styled.div`
   ${Container}:hover & {
     background-color: rgba(55, 55, 55, 0.8);
   }
-
-  
-  
-  ${Media.tablet`
-    background-color: rgba(55, 55, 55, 0.8);
-  `}
+  ${Media.tablet`background-color: rgba(55, 55, 55, 0.8);`}
 `;
 
 const CardTitle = styled.h4`
@@ -68,14 +61,17 @@ const CardTitle = styled.h4`
 const CardPrice = styled.h5`
   font-weight: 800;
 `;
+
 const TextInformation = styled.h5`
   font-weight: 800;
   font-size: 18px;
   z-index: 2;
 `;
+
 const TitleInfo = styled.div`
   z-index: 2;
 `;
+
 const InformationContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -88,8 +84,5 @@ const InformationContainer = styled.div`
   ${Container}:hover & {
     margin-top: 0px;
   }
-
-  ${Media.tablet`
-    margin-top: 0px;
-  `}
+  ${Media.tablet`margin-top: 0px;`}
 `;
