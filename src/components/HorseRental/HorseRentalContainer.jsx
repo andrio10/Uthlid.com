@@ -1,23 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import BlackbarInformation from "../Reusable/BlackbarInformation/BlackbarInformation";
-import Header from "../SinglePageCottage/Header";
-import HorseRentalCard from "./HorseRentalCard";
-import Layout from "../Reusable/Layout";
-import HorseRentInformation from "../../Assets/HorseRental"; /* Hérna fáum við upplýsingarnar um hverja ferð. 
-                                                              Þurfum ekki að gera /index.js því að javascript leitar að henni automatískt. */
-import HorseBackground from "../../Assets/HorseRental/k3_9089.jpg";
-import Colors from "../../Assets/Variables/Colors";
-import Media from '../../Assets/Media/media';
+
+// Components
+import HorseRentalCard from "./HorseRentalCard"
+import {Layout, Header, BlackbarInformation} from '../Reusable';
+
+// Assets
+import {Colors, Media} from "../../Assets/Variables/";
+import {Price, HorseBackground, HorseRentInformation} from '../../Assets/HorseRental';
+
+
 /*
   Horse Rental Container sýnir þær ferðir sem að boðið er upp á.
- */
-
-const Price = [
-  { Title: `.5 hours`, Price: `50` },
-  { Title: `1  hours`, Price: `60` },
-  { Title: `2  hours`, Price: `100` }
-];
+*/
 
 const HorseRentalContainer = () => (
   <Layout>
@@ -33,7 +28,6 @@ const HorseRentalContainer = () => (
           })}
         </HorseInformation>
       </Row>
-
       <FakeContainer />
     </CardContainer>
   </Layout>
@@ -56,27 +50,21 @@ const CardContainer = styled.div`
   display: flex;
   align-items: center;
 `;
+
 const Row = styled.div`
-  display:flex;
+  display: flex;
   height: 100%;
   width: 60%;
   flex-direction: column;
-
-  ${Media.desktop`
-    width: 100vw;
-  `};
+  ${Media.desktop`width: 100vw;`};
 `;
 
 const FakeContainer = styled(HorseInformation)`
   width: 40%;
-
-  ${Media.desktop`
-    display: none;
-  `};
+  ${Media.desktop`display: none;`};
 `;
 
 const H1 = styled.h1`
-
   margin: 50px auto;
   color: ${Colors.BLACK};
 `;

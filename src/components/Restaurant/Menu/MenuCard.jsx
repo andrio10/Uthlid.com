@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Colors from "../../../Assets/Variables/Colors";
-import Media from '../../../Assets/Media/media';
+
+// Assets
+import { Colors, Media } from "../../../Assets/Variables/";
+
 const MenuCard = ({ Title, Ingred, Price }) => (
   <Container>
     <TitleDescription>
@@ -37,12 +39,7 @@ const TitleDescription = styled.div`
   flex-direction: column;
   width: 90%;
   min-height: 100%;
-
-  ${Media.phone`
-    width: 100%;
-
-  `}
-  
+  ${Media.phone`width: 100%;`}
 `;
 
 const PriceText = styled.div`
@@ -58,7 +55,6 @@ const PriceText = styled.div`
   color: ${Colors.BLACK};
   overflow: hidden;
   border-radius: 50px;
-
   ${Media.phone`
     font-size: 12px;
     min-width: 60px;
@@ -82,8 +78,5 @@ const DescriptionText = styled.p`
   margin: 0px;
   text-align: left;
   font-size: 12px;
-
-  ${Media.phone`
-    font-size: 8px;
-  `}
+  ${Media.phone`font-size: 8px;`}
 `;

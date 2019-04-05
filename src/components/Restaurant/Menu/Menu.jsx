@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+
+// Components
 import MenuCard from "./MenuCard";
-import Layout from "../../Reusable/Layout";
+import { Layout } from "../../Reusable/";
 
 // Assets
 import MenuInfo from "../../../Assets/Restaurant/MenuInfo";
-import Colors from "../../../Assets/Variables/Colors";
-import Media from '../../../Assets/Media/media';
+import { Colors, Media } from "../../../Assets/Variables/";
 
-const keys = Object.entries(MenuInfo);
 function Menu() {
   return (
     <Layout>
@@ -16,9 +16,7 @@ function Menu() {
         {Object.entries(MenuInfo).map(values => {
           return (
             <FoodType>
-              <TitleText>   
-                  {values[0]}
-              </TitleText>
+              <TitleText>{values[0]}</TitleText>
               {values[1].map(v => {
                 return <MenuCard {...v} />;
               })}
@@ -36,10 +34,7 @@ const Container = styled.div`
   flex-direction: column;
   width: 80%;
   height: 100%;
-
-  ${Media.phone`
-  width: 90%;
-  `}
+  ${Media.phone`width: 90%;`}
 `;
 
 const FoodType = styled.div`
@@ -55,5 +50,4 @@ const TitleText = styled.h1`
   margin: 20px auto;
   color: ${Colors.BLACK};
   font-size: 2rem;
-  
 `;

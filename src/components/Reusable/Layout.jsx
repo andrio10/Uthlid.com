@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import Media from '../../Assets/Media/media';
 
-
+// Assets
+import { Media } from "../../Assets/Variables/";
 
 // Breidd síðunar svo að hún er jöfn yfir allar undirsíður.
 // UseEffect setur síðuna efst upp í hvert skipti sem að það keyrir.
@@ -30,17 +30,10 @@ const Container = styled.div`
   padding-bottom: 30px;
   margin: 0px auto;
   background-color: ${props =>
-  props.myColor ? props.myColor : "white!important"};
-
-
-  ${Media.large`
-    width: calc(100vw - 136px)};
-  `};
-
-
+    props.myColor ? props.myColor : "white!important"};
+  ${Media.large`width: calc(100vw - 136px)}`};
   ${Media.phone`
     width: 100vw;
     margin-bottom: 50px;
   `};
-
 `;

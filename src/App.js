@@ -1,28 +1,30 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { AnimatedSwitch } from "react-router-transition";
-import "./components/cover.css";
-import CardContainer from "./components/Cottage/CardContainer";
 import styled, { createGlobalStyle } from "styled-components";
-import SinglePageCottage from "./components/SinglePageCottage/SinglePageCottage";
-import HorseRentalContainer from "./components/HorseRental/HorseRentalContainer";
-import Golf from "./components/Golf/Golf";
 
-import Container from "./components/LoadingSite/Container";
-import Sidebar from "./components/Sidebar/Container";
-import Camping from "./components/Camping/CampingContainer";
-import Restaurant from "./components/Restaurant/RestaurantContainer";
+// Components
+import {
+  CardContainer,
+  SinglePageCottage,
+  HorseRentalContainer,
+  Golf,
+  Container,
+  Sidebar,
+  Camping,
+  Restaurant
+} from "./components";
+import { Colors } from "./Assets/Variables";
 
 // GlobalStyles er frá Styled-Components, er að nota það til að ákveða font fyrir alla síðuna.
 const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     font-family: 'Raleway', serif !important;
-    background-color: #F4F4F4!important;
+    background-color: ${Colors.WHITE}!important;
     height: 100%;
     position: relative;
     overflow-x: hidden;
-    overflow-y: scroll;
   }
 `;
 function mapStyles(styles) {
@@ -44,20 +46,13 @@ class App extends Component {
           atActive={{ opacity: 1 }}
           mapStyles={mapStyles}
         >
-          {/* Nauðsynlegt að hafa path=/ neðst, annars fer React-Router alltaf á fyrstu heimasíðuna */}
-
-          <Route
-            exact={true}
-            path="/cottages/:id"
-            component={SinglePageCottage}
-          />
+          <Route path="/cottages/:id" component={SinglePageCottage} />
           <Route exact={true} path="/cottages" component={CardContainer} />
           <Route path="/horserental" component={HorseRentalContainer} />
           <Route path="/golf" component={Golf} />
-
           <Route path="/camping" component={Camping} />
           <Route path="/restaurant" component={Restaurant} />
-          <Route path="/" component={Container} />
+          <Route exact={true} path="/" component={Container} />
         </Animate>
       </AppContainer>
     );

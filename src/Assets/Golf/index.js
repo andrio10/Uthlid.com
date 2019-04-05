@@ -18,11 +18,11 @@ const InformationBoxPrice = `Day Fees`;
 const Price = [
   {
     Title: `Single`,
-    Price: `3.200`
+    Price: `3.200 ISK`
   },
   {
     Title: `Couples`,
-    Price: `5.000`
+    Price: `5.000 ISK`
   }
 ];
 

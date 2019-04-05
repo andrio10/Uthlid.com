@@ -2,12 +2,17 @@ import BruararskordImg from "./Bruararskord.jpg";
 import BruarfossImg from "./Bruarfoss.jpg";
 import HestaleigaImg from "./hestaleiga_uthlid.jpg";
 import KolgrimshollImg from "./Kolgrimsholl.jpg";
-
+import HorseBackground from "./k3_9089.jpg";
 /*
 
   Allar upplýsingar sem að við ætlum að nota í HorseRental fara hingað inn. Myndir ásamt texta.
 
 */
+const Price = [
+  { Title: `.5 hours`, Price: `50` },
+  { Title: `1  hours`, Price: `60` },
+  { Title: `2  hours`, Price: `100` }
+];
 
 
 const HorseRentInformation = [
@@ -43,4 +48,8 @@ const HorseRentInformation = [
   }
 ];
 
-export default HorseRentInformation;
+export {
+  Price,
+  HorseBackground,
+  HorseRentInformation
+}

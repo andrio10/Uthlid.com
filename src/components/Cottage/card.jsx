@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+
+// Components
 import LargeIcons from "./LargeIcons";
 import SmallIcon from "./SmallIcon";
-import Button from '../Reusable/Button';
-import Colors from '../../Assets/Variables/Colors';
+import { Button } from "../Reusable/";
 
-import Media from '../../Assets/Media/media';
+// Assets
+import { Colors, Media } from "../../Assets/Variables/";
 
 const Card = ({ CoverPhoto_small, Title, BlackbarInfo, SmallIcons, URL }) => (
   <Container>
@@ -14,7 +16,11 @@ const Card = ({ CoverPhoto_small, Title, BlackbarInfo, SmallIcons, URL }) => (
     <Line />
     <LargeIcons IconArray={BlackbarInfo} />
     <SmallIcon IconArray={SmallIcons} />
-    <Button toPath={`/cottages/${URL}`} background={true} BackgroundColor={`${Colors.BLACK}`}>
+    <Button
+      toPath={`/cottages/${URL}`}
+      background={true}
+      BackgroundColor={`${Colors.BLACK}`}
+    >
       {`See More `}
     </Button>
   </Container>
@@ -26,7 +32,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #F4F4F4!important;
+  background-color: ${Colors.WHITE} !important;
   height: 700px;
   width: 500px;
   overflow: hidden;
@@ -35,14 +41,8 @@ const Container = styled.div`
   align-items: center;
   padding-bottom: 10px;
 
-  ${Media.tablet`
-    width:400px;  
-  `}
-
-  ${Media.phone`
-    width: 95%;  
-  `}
-  
+  ${Media.tablet`width:400px;`}
+  ${Media.phone`width: 95%;`}
 `;
 
 const Image = styled.img`
@@ -53,7 +53,7 @@ const Image = styled.img`
 const Line = styled.div`
   height: 1px;
   width: 70%;
-  background-color: #dcd0c0;
+  background-color: ${Colors.LIGHTGOLD};
   display: flex;
   margin: 0px auto;
 `;
@@ -65,12 +65,6 @@ const TitleText = styled.h1`
   color: #373737;
   font-weight: 200;
 
-  ${Media.tablet`
-    font-size: 25px;  
-  `}
-
-  ${Media.phone`
-    font-size: 20px;  
-  `}
+  ${Media.tablet`font-size: 25px;`}
+  ${Media.phone`font-size: 20px;`}
 `;
-

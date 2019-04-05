@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Colors from "../../Assets/Variables/Colors";
 
-// Ef isExternal er True þá fer "toPath" á annað vefsvæði. 
-// Ef isExternal er False þá skiptum við um route innan síðunar.
+// Assets
+import { Colors } from "../../Assets/Variables/";
+
+// Ef isExternal er True þá notum við Anchor Tag
+// Ef isExternal er False þá notum við Link Tag
 
 const ButtonReusable = ({
   toPath,

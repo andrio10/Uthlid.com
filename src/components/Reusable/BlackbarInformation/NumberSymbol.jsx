@@ -1,18 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-const NumberSymbol = ({ Price }) => (
+/* Ef að Price er Array, sem er tilvikið fyrir HorseRental þá loopum við yfir það. */
+/* Ef að Price er stök tala setjum við það beint inn. Sem er tilvikið fyrir Cottages*/
+const NumberSymbol = ({ Price, golf }) => (
   <Container>
     <TextContainer>
-    {/* Ef að Price er Array, sem er tilvikið fyrir HorseRental þá loopum við yfir það. */}
-    {/* Ef að Price er stök tala setjum við það beint inn. Sem er tilvikið fyrir Cottages*/}
       {Array.isArray(Price) ? (
         Price.map(values => {
-          {console.log(values)}
           return (
             <Row>
-              <Text> {values.Title} </Text>
-              <Number small> {values.Price}€ </Number>
+              <h5> {values.Title} </h5>
+              <Number small>
+                {values.Price} {golf ? "" : "€"}{" "}
+              </Number>
             </Row>
           );
         })
@@ -46,8 +47,6 @@ const Symbol = styled(Number)`
   margin: 10px;
   font-size: ${props => (props.small ? "20" : "40")}px;
 `;
-
-const Text = styled.h5``;
 
 const TextContainer = styled.div`
   display: flex;

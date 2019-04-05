@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+
+// Components
 import NumberSymbol from "./NumberSymbol";
 import ContactInfo from "./contactInfo";
-import Button from '../Button';
-import Media from '../../../Assets/Media/media';
-import Colors from '../../../Assets/Variables/Colors';
-/*
+import Button from "../Button";
 
+// Assets
+import { Colors, Media } from "../../../Assets/Variables/";
+/*
   Information er ljósbrúni kassinn.
   Þarf að breyta honum aðeins svo að hægt sé að nota hann fyrir Golf og hestaferðir. 
   Ferðin sem að Price, Title fer: Assets -> SinglePageCottage -> BlackbarInfo -> Information.jsx.
-
 */
 
 const Information = ({
@@ -22,10 +23,23 @@ const Information = ({
 }) => (
   <Container>
     <H1>{Title || `Bookings`}</H1>
-    {InformationBoxPrice ? (<Text>{InformationBoxPrice}</Text>) : (<Text>Pricelist</Text>)}
-    <NumberSymbol Price={Price} />
-    {horseInformation ? (<AboutText> All trips are great riding tours around the unspoiled and beautiful landscape of Úthlíð. </AboutText>) : null}
-    {golf ? (<AboutText>Members of the Icelandic Golf Union can book tee times at www.golf.is</AboutText>) : null}
+    {InformationBoxPrice ? (
+      <Text>{InformationBoxPrice}</Text>
+    ) : (
+      <Text>Pricelist</Text>
+    )}
+    <NumberSymbol Price={Price} golf={golf} />
+    {horseInformation ? (
+      <AboutText>
+        All trips are great riding tours around the unspoiled and beautiful
+        landscape of Úthlíð.{" "}
+      </AboutText>
+    ) : null}
+    {golf ? (
+      <AboutText>
+        Members of the Icelandic Golf Union can book tee times at www.golf.is
+      </AboutText>
+    ) : null}
     <ContactInfo />
     {horseInformation || golf ? null : (
       <Button
@@ -44,7 +58,7 @@ const Container = styled.div`
   display: flex;
   height: 500px;
   width: 500px;
-  background-color: #c0b283;
+  background-color: ${Colors.GOLD};
   align-self: center;
   flex-direction: column;
   margin-top: 100px;
@@ -60,7 +74,7 @@ const Container = styled.div`
       height: 400px;
       align-self: flex-end;
   `};
-  
+
   ${Media.phone`
       margin-top: -200px;
       align-self: center;
@@ -94,5 +108,3 @@ const AboutText = styled.h5`
   margin: 0px;
   padding: 0px;
 `;
-
-

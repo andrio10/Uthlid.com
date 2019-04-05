@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Media from '../../../Assets/Media/media';
-/*
 
+// Assets
+import {Colors, Media} from "../../../Assets/Variables/";
+/*
   Fáum Info frá BlackbarInformation í gegnum props. Í Info eru Iconin og tölurnar sem að við þurfum að sýna fyrir sumarbústaðina.
   Ferðin sem að Info fer: Assets -> SinglePageCottage -> BlackbarInfo -> Blackbar.jsx.
-  
 */
 
 const Blackbar = ({ BlackbarInfo , horseInformation}) => (
@@ -27,13 +27,9 @@ const Container = styled.div`
   display: flex;
   height: 80px;
   width: 100%;
-  background-color: ${props => props.horseInformation ? "transparent" : "#373737"};
+  background-color: ${props => props.horseInformation ? "transparent" : `${Colors.BLACK}`};
   justify-content: space-evenly;
-
-
-  ${Media.phone`
-    display: none;
-  `};
+  ${Media.phone`display: none;`};
 `;
 
 const Row = styled.div`

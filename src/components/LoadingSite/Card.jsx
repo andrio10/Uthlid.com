@@ -1,8 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "../Reusable/Button";
-import Colors from "../../Assets/Variables/Colors";
-import Media from '../../Assets/Media/media';
+
+// Components
+import {Button} from "../Reusable/";
+
+//Assets
+import {Colors, Media} from "../../Assets/Variables/";
+
 const Card = ({ Backgroundcolor, Title, Paragraph, Image, Path }) => (
   <Container background={Backgroundcolor}>
     <TextSide background={Backgroundcolor}>
@@ -39,7 +43,6 @@ const Container = styled.div`
 const ImageSide = styled.img`
   height: 100%;
   width: 50%;
-
   ${Media.tablet`
     height: 50%;
     width: 100%;
@@ -53,28 +56,22 @@ const TextSide = styled.div`
   align-items: center;
   color: ${props => (props.background ? Colors.GOLD : Colors.BLACK)};
   width: 50%;
-
   ${Media.tablet`
     width: 100%;
     height: 50%;
   `}
 `;
+
 const TitleText = styled.h1`
   text-transform: uppercase;
-
-  ${Media.tablet`
-    font-size: 30px;
-  `}
+  ${Media.tablet`font-size: 30px;`}
 `;
 const Description = styled.p`
   line-height: 2;
   width: 50%;
 
-
   ${Media.desktop`
     width: 90%;
     line-height: 1.2;
   `}
-
-
 `;
